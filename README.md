@@ -45,6 +45,28 @@ to dotted keys, and intersected with the English key export of `upstream/main`
 (`locales/_keys.desktop.json`). Keys upstream has since removed are dropped, so the pack never carries
 dead strings; the 38 dropped keys are listed when the build script runs.
 
+## Credits and timeline
+
+The **Desktop** catalog is this pack's original contribution, and it started with StudioCodeAI:
+
+| Date | What |
+|---|---|
+| 2026-08-23 | StudioCodeAI opens [PR #92590](https://github.com/NousResearch/hermes-agent/pull/92590) — the first Desktop pt-BR proposal |
+| 2026-09-16 | commit `0bbc800f55e` **creates** `apps/desktop/src/i18n/pt.ts`; before it the Desktop app had no Portuguese at all |
+| 2026-09-28 | [#126296](https://github.com/NousResearch/hermes-agent/pull/126296) moves i18n to pluggable, layered language packs — an in-tree TS catalog stops being the supported shape |
+| 2026-10-13 | the catalog is ported here, in the layout the loader and `hermes plugins validate` expect |
+
+The core and TUI catalogs mirror the `pt` locale Hermes already bundles upstream (added by other
+contributors); they are re-registered here under the real `pt-br` id so it wins over the `pt` / `pt-BR`
+alias.
+
+Credit where it is due: [henrickgu/hermes-lang-pt-br](https://github.com/henrickgu/hermes-lang-pt-br)
+independently reused the keys from PR #92590 — "every valid key from this PR plus 1,501 new
+translations".
+
+> **Note:** both repos register the `pt-br` id, and when two packs cover the same key the last one
+> loaded wins. Install **one** of them, not both.
+
 ## Requirements
 
 Hermes ≥ 0.21 — language packs as plugins (`provides_locales`) landed there. Nothing else.

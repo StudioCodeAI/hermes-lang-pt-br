@@ -80,6 +80,31 @@ hermes plugins validate .
 Checks the manifest, the `provides_locales` declaration against the shipped files, text-only leaves,
 and every key against the English reference catalogs.
 
+`tools/verify_pack.py` is the standalone twin, and CI runs it on every push and pull request
+(`.github/workflows/verify.yml`). It needs no Hermes install and no clone — it fetches the reference
+files from `NousResearch/hermes-agent` over HTTPS and checks, per surface:
+
+1. every catalog parses and every leaf is text;
+2. every key exists in the English reference for that surface;
+3. core values keep the English `{placeholder}` set exactly;
+4. braces are balanced in every value;
+5. no duplicate keys.
+
+```bash
+python tools/verify_pack.py                        # against hermes-agent@main
+python tools/verify_pack.py --ref v0.21.6          # against a release tag
+python tools/verify_pack.py --json                 # machine-readable report
+python tools/verify_pack.py --min-desktop-coverage 0.80
+```
+
+Current result against `main`: **PASS**, 0 warnings, 0 errors.
+
+```
+- core     locales/pt-br.yaml:         3433 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- tui      locales/pt-br.tui.yaml:     1301 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- desktop  locales/pt-br.desktop.yaml: 4314 key(s),  84.8% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+```
+
 Verified against `upstream/main`: **0 placeholder/key divergences** on all three surfaces
 (core 3,433/3,433 · TUI 1,301/1,301 · Desktop 4,314/4,314 present in the English key export).
 

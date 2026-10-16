@@ -24,15 +24,21 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 
 | Surface | File | Keys | Coverage |
 |---|---|---|---|
-| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,433 | 100% of the English core catalog |
-| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,301 | 100% of the English TUI catalog |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 4,314 | 84.8% of the English desktop catalog |
+| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,436 | **100%** of the English core catalog |
+| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,346 | **100%** of the English TUI catalog |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,101 | **100%** of the English desktop catalog |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
 contribution — before this pack the Desktop app had no Portuguese at all.
 
-Missing Desktop keys fall back to English: a pack is allowed to be partial.
+The catalogs track `NousResearch/hermes-agent@main`, so they are complete for the current English
+source: every key exists and every value is translated. On a *release* older than the latest `main`,
+`hermes plugins validate` lists the keys upstream added since that release as "not in the English
+catalog (ignored at runtime)" — those are warnings, never errors, and the strings are simply not
+reached until the release that introduces them. Building against an older release instead would carry
+keys upstream has since deleted, which is worse.
+
 
 ## Where the translations come from
 
@@ -66,6 +72,28 @@ translations".
 
 > **Note:** both repos register the `pt-br` id, and when two packs cover the same key the last one
 > loaded wins. Install **one** of them, not both.
+
+## Staying in sync
+
+Hermes moves fast. `.github/workflows/drift.yml` runs weekly (and on demand) and reports how far the
+pack is from `main` and from the latest release, opening a single issue when `main` has keys we do not
+translate yet or no longer has keys we carry.
+
+```bash
+python tools/drift.py            # the same report, locally
+python tools/drift.py --drift    # non-zero exit when something drifted
+```
+
+The routine when it fires:
+
+1. `node tools/build-desktop-pack.mjs` — refresh `pt-br.desktop.yaml` against the current English export.
+2. Translate the newly missing keys (the report lists them).
+3. `python tools/verify_pack.py --ref main` and `hermes plugins validate .` — both must pass.
+4. Commit, then open a **SHA-bump PR** for `plugin-catalog/hermes-lang-pt-br.yaml` in
+   `NousResearch/hermes-agent` (catalogue rule 4: a SHA bump is a new PR).
+
+Nothing updates an installed copy on its own — by design, a listed plugin may not self-update
+(catalogue rule 3), so users pick the new pin up with `hermes plugins update hermes-lang-pt-br`.
 
 ## Requirements
 

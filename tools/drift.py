@@ -2,8 +2,14 @@
 """Report how far this pack is from hermes-agent@main and from the latest release.
 
 Runs ``tools/verify_pack.py --json`` once per reference and prints a Markdown
-summary. Exit code is always 0 — drift is information, not a failure; the
-workflow that runs it decides what to do with ``--drift``.
+summary.
+
+``--drift`` alarms only on keys the reference *no longer has* — those are ours to
+drop and are real stale strings — or on a surface that fails to parse. New
+English keys are reported but do not alarm: the key export counts every leaf,
+including array/conditional values a language pack cannot carry (a non-text leaf
+is rejected by the validator), so a non-zero "new in English" is information for
+a human, not proof of work.
 """
 
 from __future__ import annotations
@@ -48,43 +54,45 @@ def run_report(ref: str) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--drift", action="store_true", help="exit 1 when any reference drifted")
+    parser.add_argument("--drift", action="store_true", help="exit 1 when the pack carries stale keys")
     args = parser.parse_args()
 
     release = latest_release()
     refs = ["main"] + ([release] if release != "main" else [])
     reports = {ref: run_report(ref) for ref in refs}
 
-    drifted = False
-    lines = ["| reference | surface | keys | coverage | missing | unknown | orphans |", "|---|---|---|---|---|---|---|"]
+    stale = False
+    lines = [
+        "| reference | surface | keys | coverage | new in English | stale in pack |",
+        "|---|---|---|---|---|---|",
+    ]
     for ref, report in reports.items():
         for surface, entry in sorted(report.get("surfaces", {}).items()):
             if entry.get("error"):
-                lines.append(f"| `{ref}` | {surface} | — | — | — | — | {entry['error']} |")
-                drifted = True
+                lines.append(f"| `{ref}` | {surface} | — | — | — | {entry['error']} |")
+                stale = True
                 continue
             missing = entry["reference_keys"] - (entry["keys"] - entry["unknown_count"])
             unknown = entry["unknown_count"]
-            orphans = entry.get("orphans")
-            orphans = len(orphans) if isinstance(orphans, list) else 0
-            if missing or unknown or orphans:
-                drifted = True
+            # Only the newest reference can tell us a key is stale: an older
+            # release legitimately lacks everything added after it, so its
+            # "unknown" count is us being ahead, not us carrying dead weight.
+            if unknown and ref == "main":
+                stale = True
             lines.append(
-                f"| `{ref}` | {surface} | {entry['keys']} | {entry['coverage']:.1%} | "
-                f"{missing} | {unknown} | {orphans} |"
+                f"| `{ref}` | {surface} | {entry['keys']} | {entry['coverage']:.1%} | {missing} | {unknown} |"
             )
 
-    print("## hermes-lang-pt-br — drift report\n")
+    print("## hermes-lang-pt-br - drift report\n")
     print("\n".join(lines))
     print(
-        "\n`missing` = English keys the pack does not translate yet · "
-        "`unknown` = pack keys this reference no longer has · `orphans` = same, counted per file.\n"
+        "\n`new in English` = keys the reference has that the pack does not translate (this count"
+        " includes\narray/conditional leaves a pack cannot carry) - `stale in pack` = keys the reference"
+        " no longer\nhas, which are safe to drop.\n"
     )
-    print("**drift detected**" if drifted else "**in sync**")
+    print("**stale keys detected**" if stale else "**in sync**")
 
-    if drifted and args.drift:
-        return 1
-    return 0
+    return 1 if (stale and args.drift) else 0
 
 
 if __name__ == "__main__":

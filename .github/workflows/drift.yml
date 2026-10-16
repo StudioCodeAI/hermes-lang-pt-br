@@ -43,7 +43,7 @@ jobs:
           set -euo pipefail
           python tools/drift.py | tee report.md
           cat report.md >> "$GITHUB_STEP_SUMMARY"
-          if grep -q 'drift detected' report.md; then
+          if grep -q 'stale keys detected' report.md; then
             echo "drift=1" >> "$GITHUB_OUTPUT"
           else
             echo "drift=0" >> "$GITHUB_OUTPUT"

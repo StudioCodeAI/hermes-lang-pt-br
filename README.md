@@ -26,14 +26,15 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 |---|---|---|---|
 | Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,436 | **100%** of the English core catalog |
 | TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,346 | **100%** of the English TUI catalog |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,101 | **100%** of the English desktop catalog |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | **100%** of the translatable desktop catalog (4 non-text keys upstream) |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
 contribution — before this pack the Desktop app had no Portuguese at all.
 
 The catalogs track `NousResearch/hermes-agent@main`, so they are complete for the current English
-source: every key exists and every value is translated. On a *release* older than the latest `main`,
+source: every translatable key exists and every value is translated (array- and function-valued
+entries stay in TypeScript; a text pack cannot carry them). On a *release* older than the latest `main`,
 `hermes plugins validate` lists the keys upstream added since that release as "not in the English
 catalog (ignored at runtime)" — those are warnings, never errors, and the strings are simply not
 reached until the release that introduces them. Building against an older release instead would carry

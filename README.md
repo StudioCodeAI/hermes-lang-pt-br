@@ -24,7 +24,7 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 
 | Surface | File | Keys | Coverage |
 |---|---|---|---|
-| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,477 | **100%** of the English core catalog |
+| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,485 | **100%** of the English core catalog |
 | TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,356 | **100%** of the English TUI catalog |
 | Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | **100%** of the translatable desktop catalog (4 non-text keys upstream) |
 
@@ -132,13 +132,13 @@ python tools/verify_pack.py --min-desktop-coverage 0.80
 Current result against `main`: **PASS**, 0 warnings, 0 errors.
 
 ```
-- core     locales/pt-br.yaml:         3477 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- core     locales/pt-br.yaml:         3485 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 - tui      locales/pt-br.tui.yaml:     1356 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 - desktop  locales/pt-br.desktop.yaml: 5172 key(s),  99.9% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 ```
 
 Verified against `upstream/main`: **0 placeholder/key divergences** on all three surfaces
-(core 3,477/3,477 · TUI 1,356/1,356 · Desktop 5,172/5,176 present in the English key export; the four
+(core 3,485/3,485 · TUI 1,356/1,356 · Desktop 5,172/5,176 present in the English key export; the four
 remaining desktop keys are arrays/structured values a text pack cannot carry).
 
 The two `caution` hits from the install scanner are false positives on translated prose: a

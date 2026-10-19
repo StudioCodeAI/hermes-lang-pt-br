@@ -69,7 +69,10 @@ alias.
 
 Credit where it is due: [henrickgu/hermes-lang-pt-br](https://github.com/henrickgu/hermes-lang-pt-br)
 independently reused the keys from PR #92590 — "every valid key from this PR plus 1,501 new
-translations".
+translations". His upstream proposal for the same surface
+([#98933](https://github.com/NousResearch/hermes-agent/pull/98933)) was opened after #92590 and closed
+unmerged; **this** repository is the catalogue entry and the only one that ships versioned releases.
+The full provenance record — including who wrote each surface — is in [AUTHORS.md](AUTHORS.md).
 
 > **Note:** both repos register the `pt-br` id, and when two packs cover the same key the last one
 > loaded wins. Install **one** of them, not both.

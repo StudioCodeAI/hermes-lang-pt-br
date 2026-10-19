@@ -43,7 +43,7 @@ appTour.composer.text: "Diga o que você quer que seja feito. Digite @ para incl
 appTour.composer.title: "Pergunte aqui"
 appTour.messaging.text: "Fale com o Hermes pelo Telegram, Slack, Discord e mais."
 appTour.messaging.title: "Mensagens"
-appTour.model.text: "Escolhe qual modelo responde a você."
+appTour.model.text: "Escolha qual modelo responde a você."
 appTour.model.title: "Seletor de modelo"
 appTour.modelLocal: "Este computador pode rodar um modelo localmente: Configurações > Provedores > Modelos locais."
 appTour.newSession.text: "Uma nova sessão tem o próprio contexto. Use uma por tarefa."

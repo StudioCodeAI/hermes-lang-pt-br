@@ -17,6 +17,7 @@ and the only one that ships versioned releases.
 | 2026-10-17 | the catalogue entry merges upstream ([#139811](https://github.com/NousResearch/hermes-agent/pull/139811)) |
 | 2026-10-19 | core + TUI resynced with `main` (`3820a06`); the pt-PT → pt-BR wording pass by @4nrry merges (`dd9ec89`) |
 | 2026-10-19 | core resynced again: the 8 new `/queue` strings (`cli.queue.*`) translated, 3,485/3,485 keys |
+| 2026-10-22 | core resynced again: the 2 new gateway error notices (`gateway.errors.cron_session_read_only`, `gateway.errors.workspace_unavailable`), 3,487/3,487 keys |
 
 ## Who wrote what
 

@@ -24,9 +24,9 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 
 | Surface | File | Keys | Coverage |
 |---|---|---|---|
-| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,485 | **100%** of the English core catalog |
+| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,487 | **100%** of the English core catalog |
 | TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,356 | **100%** of the English TUI catalog |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | **100%** of the translatable desktop catalog (4 non-text keys upstream) |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | 97.9% of the English desktop catalog — resync with `main` is the next PR: 112 new keys to translate, 36 retired upstream to drop |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
@@ -129,17 +129,18 @@ python tools/verify_pack.py --json                 # machine-readable report
 python tools/verify_pack.py --min-desktop-coverage 0.80
 ```
 
-Current result against `main`: **PASS**, 0 warnings, 0 errors.
+Current result against `main`: **PASS**, 1 warning (the 36 retired desktop keys), 0 errors.
 
 ```
-- core     locales/pt-br.yaml:         3485 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- core     locales/pt-br.yaml:         3487 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 - tui      locales/pt-br.tui.yaml:     1356 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
-- desktop  locales/pt-br.desktop.yaml: 5172 key(s),  99.9% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- desktop  locales/pt-br.desktop.yaml: 5172 key(s),  97.9% of the English catalog, 36 unknown, 0 placeholder mismatch(es)
 ```
 
 Verified against `upstream/main`: **0 placeholder/key divergences** on all three surfaces
-(core 3,485/3,485 · TUI 1,356/1,356 · Desktop 5,172/5,176 present in the English key export; the four
-remaining desktop keys are arrays/structured values a text pack cannot carry).
+(core 3,487/3,487 · TUI 1,356/1,356 · Desktop 5,172/5,248 — the 36 keys upstream has since retired
+are reported as a warning and ignored at runtime, and 4 of the remaining reference keys are
+arrays/structured values a text pack cannot carry).
 
 The two `caution` hits from the install scanner are false positives on translated prose: a
 `… install.sh | sh` URL inside a translated error message, and an "update AGENTS.md" string.

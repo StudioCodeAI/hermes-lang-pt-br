@@ -24,17 +24,19 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 
 | Surface | File | Keys | Coverage |
 |---|---|---|---|
-| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,477 | **100%** of the English core catalog |
-| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,356 | **100%** of the English TUI catalog |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | **100%** of the translatable desktop catalog (4 non-text keys upstream) |
+| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,487 | **100%** at the last resync — 98.8% against `main` @ `25b50015` |
+| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,356 | **100%** at the last resync — 97.1% against `main` @ `25b50015` |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | 92.7% against `main` @ `25b50015` — resync with `main` is the next PR: 402 new keys to translate, 53 retired upstream to drop |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
 contribution — before this pack the Desktop app had no Portuguese at all.
 
-The catalogs track `NousResearch/hermes-agent@main`, so they are complete for the current English
-source: every translatable key exists and every value is translated (array- and function-valued
-entries stay in TypeScript; a text pack cannot carry them). On a *release* older than the latest `main`,
+The catalogs track `NousResearch/hermes-agent@main`, which moves every day — so every figure on this
+page names the revision it was measured against, and `python tools/drift.py` prints the gap against the
+current `main`. At the last resync every translatable key existed and every value was translated;
+array- and function-valued entries stay in TypeScript, because a text pack cannot carry them. On a
+*release* older than the latest `main`,
 `hermes plugins validate` lists the keys upstream added since that release as "not in the English
 catalog (ignored at runtime)" — those are warnings, never errors, and the strings are simply not
 reached until the release that introduces them. Building against an older release instead would carry
@@ -129,17 +131,21 @@ python tools/verify_pack.py --json                 # machine-readable report
 python tools/verify_pack.py --min-desktop-coverage 0.80
 ```
 
-Current result against `main`: **PASS**, 0 warnings, 0 errors.
+Current result against `main` @ `25b50015` (2026-11-02): **PASS**, 3 warnings (one per surface, listing
+the keys `main` has since retired), 0 errors.
 
 ```
-- core     locales/pt-br.yaml:         3477 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
-- tui      locales/pt-br.tui.yaml:     1356 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
-- desktop  locales/pt-br.desktop.yaml: 5172 key(s),  99.9% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- core     locales/pt-br.yaml:         3487 key(s),  98.8% of the English catalog, 14 unknown, 0 placeholder mismatch(es)
+- tui      locales/pt-br.tui.yaml:     1356 key(s),  97.1% of the English catalog,  6 unknown, 0 placeholder mismatch(es)
+- desktop  locales/pt-br.desktop.yaml: 5172 key(s),  92.7% of the English catalog, 53 unknown, 0 placeholder mismatch(es)
 ```
 
-Verified against `upstream/main`: **0 placeholder/key divergences** on all three surfaces
-(core 3,477/3,477 · TUI 1,356/1,356 · Desktop 5,172/5,176 present in the English key export; the four
-remaining desktop keys are arrays/structured values a text pack cannot carry).
+Verified against that revision: **0 placeholder/key divergences** on all three surfaces
+(core 3,473/3,515 · TUI 1,350/1,390 · Desktop 5,119/5,521 — the numerators are the keys that match the
+English reference, which is what the coverage column divides by; the retired keys are reported as
+warnings and ignored at runtime, and 4 known reference keys are arrays or structured values a text pack
+cannot carry: `composer.followUpPlaceholders`, `composer.newSessionPlaceholders`, `intro.custom`,
+`sidebar.projects.branchOff`).
 
 The two `caution` hits from the install scanner are false positives on translated prose: a
 `… install.sh | sh` URL inside a translated error message, and an "update AGENTS.md" string.

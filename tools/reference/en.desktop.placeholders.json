@@ -1,0 +1,2340 @@
+{
+ "_comment": "Placeholder shape of the English desktop bundle, emitted by tools/emit-en.mjs at the revision in `ref`. Used by tools/verify_pack.py to check the desktop surface; regenerate it on every desktop resync.",
+ "ref": "25b5001538fcd24041f190dd57ede0f79fddeb18",
+ "placeholders": {
+  "agents.activeCount": [
+   "0"
+  ],
+  "agents.ageDays": [
+   "0"
+  ],
+  "agents.ageHours": [
+   "0"
+  ],
+  "agents.ageMinutes": [
+   "0"
+  ],
+  "agents.ageSeconds": [
+   "0"
+  ],
+  "agents.agentsCount": [
+   "0"
+  ],
+  "agents.delegation": [
+   "0"
+  ],
+  "agents.durationMinutes": [
+   "0",
+   "1"
+  ],
+  "agents.durationSeconds": [
+   "0"
+  ],
+  "agents.failedCount": [
+   "0"
+  ],
+  "agents.filesCount": [
+   "0"
+  ],
+  "agents.moreAgents": [
+   "0"
+  ],
+  "agents.moreFiles": [
+   "0"
+  ],
+  "agents.tokens": [
+   "0"
+  ],
+  "agents.toolsCount": [
+   "0"
+  ],
+  "agents.updatedAgo": [
+   "0"
+  ],
+  "agents.workers": [
+   "0"
+  ],
+  "agents.workersActive": [
+   "0"
+  ],
+  "artifactCard.generating": [
+   "0"
+  ],
+  "artifactCard.versionBadge": [
+   "0"
+  ],
+  "artifactPreview.versionOf": [
+   "0",
+   "1"
+  ],
+  "artifacts.goToPage": [
+   "0",
+   "1"
+  ],
+  "artifacts.rangeOf": [
+   "0",
+   "1",
+   "2"
+  ],
+  "assistant.approval.alwaysDescription": [
+   "0"
+  ],
+  "assistant.catalogInstall.envVar": [
+   "0"
+  ],
+  "assistant.catalogInstall.missingEnv": [
+   "0"
+  ],
+  "assistant.catalogInstall.requiresHermes": [
+   "0"
+  ],
+  "assistant.catalogInstall.serverNotConnected": [
+   "0",
+   "1"
+  ],
+  "assistant.catalogInstall.skill": [
+   "0"
+  ],
+  "assistant.catalogInstall.targetProfile": [
+   "0"
+  ],
+  "assistant.clarify.questionProgress": [
+   "0",
+   "1"
+  ],
+  "assistant.mcpSetup.authorized": [
+   "0"
+  ],
+  "assistant.mcpSetup.enabled": [
+   "0"
+  ],
+  "assistant.mcpSetup.failed": [
+   "0"
+  ],
+  "assistant.mcpSetup.installed": [
+   "0"
+  ],
+  "assistant.mcpSetup.toolCount": [
+   "0"
+  ],
+  "assistant.thread.errorAuthKinds.api_key.title": [
+   "0"
+  ],
+  "assistant.thread.errorAuthKinds.oauth.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.agent_init_failed.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.auth.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.auth_permanent.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.billing.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.billing.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.content_policy_blocked.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.content_policy_blocked.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.context_overflow.body": [
+   "1"
+  ],
+  "assistant.thread.errorCodes.empty_response.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.format_error.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.format_error.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.invalid_response.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.model_not_found.body": [
+   "0",
+   "1"
+  ],
+  "assistant.thread.errorCodes.model_not_found.title": [
+   "1"
+  ],
+  "assistant.thread.errorCodes.overloaded.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.overloaded.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.payload_too_large.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.provider_policy_blocked.body": [
+   "0",
+   "0"
+  ],
+  "assistant.thread.errorCodes.provider_policy_blocked.title": [
+   "0",
+   "1"
+  ],
+  "assistant.thread.errorCodes.rate_limit.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.rate_limit.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.server_error.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.server_error.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.ssl_cert_verification.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.ssl_cert_verification.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.timeout.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.timeout.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.truncated.body": [
+   "1"
+  ],
+  "assistant.thread.errorCodes.upstream_blocked.body": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.upstream_blocked.title": [
+   "0"
+  ],
+  "assistant.thread.errorCodes.upstream_rate_limit.body": [
+   "1",
+   "0"
+  ],
+  "assistant.thread.errorCodes.upstream_rate_limit.title": [
+   "1"
+  ],
+  "assistant.thread.errorOauthExpired": [
+   "0"
+  ],
+  "assistant.thread.errorOpenProviderSettings": [
+   "0"
+  ],
+  "assistant.thread.errorRateLimitResetBody": [
+   "0",
+   "1"
+  ],
+  "assistant.thread.errorRetryAtResetShort": [
+   "0"
+  ],
+  "assistant.thread.errorRetryScheduled": [
+   "0",
+   "1"
+  ],
+  "assistant.thread.errorSignInAgain": [
+   "0"
+  ],
+  "assistant.thread.errorSwitchToModel": [
+   "0",
+   "1"
+  ],
+  "assistant.thread.filesChanged": [
+   "0"
+  ],
+  "assistant.thread.loadingLocalModel": [
+   "0"
+  ],
+  "assistant.thread.resumeWhenBackgroundDone": [
+   "0"
+  ],
+  "assistant.thread.thoughtFor": [
+   "0"
+  ],
+  "assistant.thread.today": [
+   "0"
+  ],
+  "assistant.thread.turnDuration": [
+   "0"
+  ],
+  "assistant.thread.yesterday": [
+   "0"
+  ],
+  "assistant.tool.failedCalls": [
+   "0"
+  ],
+  "assistant.tool.failedMany": [
+   "0"
+  ],
+  "assistant.tool.recoveredMany": [
+   "0"
+  ],
+  "assistant.tool.titleTemplates.actionCommand": [
+   "0",
+   "1"
+  ],
+  "assistant.tool.titleTemplates.actionQuoted": [
+   "0",
+   "1"
+  ],
+  "assistant.tool.titleTemplates.actionTarget": [
+   "0",
+   "1"
+  ],
+  "assistant.tool.titleTemplates.prefixedDone": [
+   "0",
+   "1"
+  ],
+  "assistant.tool.titleTemplates.runningPrefixedTool": [
+   "0",
+   "1"
+  ],
+  "assistant.tool.titleTemplates.runningTool": [
+   "0"
+  ],
+  "billingBlock.titleProvider": [
+   "0"
+  ],
+  "boot.desktopBootFailedWithMessage": [
+   "0"
+  ],
+  "boot.failure.remoteSignInHint": [
+   "0"
+  ],
+  "boot.failure.signInWithProvider": [
+   "0"
+  ],
+  "boot.updateHold.heldByProcess": [
+   "0"
+  ],
+  "boot.updateHold.lastChecked": [
+   "0"
+  ],
+  "boot.updateHold.since": [
+   "0"
+  ],
+  "butterbar.goTo": [
+   "0",
+   "1"
+  ],
+  "catalog.discoverKind": [
+   "0"
+  ],
+  "catalog.installComplete": [
+   "0"
+  ],
+  "catalog.installTitle": [
+   "0"
+  ],
+  "catalog.results": [
+   "0"
+  ],
+  "catalog.skillsFor": [
+   "0"
+  ],
+  "catalog.slideOf": [
+   "0",
+   "1"
+  ],
+  "catalog.toolsets.callCount": [
+   "0"
+  ],
+  "catalog.toolsets.toolCount": [
+   "0"
+  ],
+  "commandCenter.actions": [
+   "0"
+  ],
+  "commandCenter.actualCost": [
+   "0"
+  ],
+  "commandCenter.days": [
+   "0"
+  ],
+  "commandCenter.generatePet.hatchRow": [
+   "1",
+   "2"
+  ],
+  "commandCenter.hermesActiveSessions": [
+   "0",
+   "1"
+  ],
+  "commandCenter.installTheme.installs": [
+   "0"
+  ],
+  "commandCenter.maintenance.actionFailed": [
+   "0"
+  ],
+  "commandCenter.maintenance.actionStarted": [
+   "0"
+  ],
+  "commandCenter.maintenance.bytes": [
+   "0"
+  ],
+  "commandCenter.maintenance.curatorLastRun": [
+   "0"
+  ],
+  "commandCenter.maintenance.resetConfirm": [
+   "0"
+  ],
+  "commandCenter.maintenance.resetDone": [
+   "0"
+  ],
+  "commandCenter.newSessionInProject": [
+   "0"
+  ],
+  "commandCenter.noUsage": [
+   "0"
+  ],
+  "commandCenter.openFolderAt": [
+   "0"
+  ],
+  "commandCenter.sharedGatewayRestartDescription": [
+   "0"
+  ],
+  "commandCenter.sharedGatewayRestarted": [
+   "0"
+  ],
+  "commandCenter.startInBranch": [
+   "0"
+  ],
+  "common.tryHint": [
+   "0"
+  ],
+  "composer.attachments": [
+   "0"
+  ],
+  "composer.couldNotPreview": [
+   "0"
+  ],
+  "composer.previewLabel": [
+   "0"
+  ],
+  "composer.queued": [
+   "0"
+  ],
+  "composer.queuedPaused": [
+   "0"
+  ],
+  "composer.removeAttachment": [
+   "0"
+  ],
+  "composer.wakeWord": [
+   "0"
+  ],
+  "composer.wakeWordListening": [
+   "0"
+  ],
+  "composer.wakeWordOff": [
+   "0"
+  ],
+  "composer.wakeWordPausedVoice": [
+   "0"
+  ],
+  "composer.wakingProfile": [
+   "0"
+  ],
+  "connectors.connectErrorFor": [
+   "0"
+  ],
+  "connectors.directory.receiptConnected": [
+   "0"
+  ],
+  "connectors.namedAccount": [
+   "0",
+   "1"
+  ],
+  "connectors.setup": [
+   "0"
+  ],
+  "connectorsPage.accounts.count": [
+   "0"
+  ],
+  "connectorsPage.accounts.removeTitle": [
+   "1",
+   "0"
+  ],
+  "connectorsPage.accounts.renameLabel": [
+   "0"
+  ],
+  "connectorsPage.accounts.retiredCount": [
+   "0"
+  ],
+  "connectorsPage.card.fact.tools": [
+   "0"
+  ],
+  "connectorsPage.card.fact.toolsOff": [
+   "0"
+  ],
+  "connectorsPage.card.fact.toolsOn": [
+   "0"
+  ],
+  "connectorsPage.card.fact.toolsSomeOn": [
+   "0",
+   "1"
+  ],
+  "connectorsPage.card.kindPlugin": [
+   "0"
+  ],
+  "connectorsPage.card.open": [
+   "0"
+  ],
+  "connectorsPage.card.turnServerOff": [
+   "0"
+  ],
+  "connectorsPage.card.turnServerOn": [
+   "0"
+  ],
+  "connectorsPage.dialog.appSwitch": [
+   "0"
+  ],
+  "connectorsPage.dialog.bothOn": [
+   "0"
+  ],
+  "connectorsPage.dialog.disconnectTitle": [
+   "0"
+  ],
+  "connectorsPage.dialog.orgNote": [
+   "0"
+  ],
+  "connectorsPage.dialog.providedByPlugin": [
+   "0"
+  ],
+  "connectorsPage.dialog.removeServerTitle": [
+   "0"
+  ],
+  "connectorsPage.dialog.rulesAppOff": [
+   "0"
+  ],
+  "connectorsPage.dialog.wayNotConnected": [
+   "0"
+  ],
+  "connectorsPage.dialog.waysTitle": [
+   "0"
+  ],
+  "connectorsPage.page.matchesElsewhere": [
+   "0"
+  ],
+  "connectorsPage.page.segmentNoMatch": [
+   "0"
+  ],
+  "connectorsPage.searchPlaceholder": [
+   "0"
+  ],
+  "connectorsPage.tools.categorySelect": [
+   "0"
+  ],
+  "connectorsPage.tools.facetSwitch": [
+   "0"
+  ],
+  "connectorsPage.tools.footerDirty": [
+   "0",
+   "1"
+  ],
+  "connectorsPage.tools.goneTitle": [
+   "0"
+  ],
+  "connectorsPage.tools.hideDeprecated": [
+   "0"
+  ],
+  "connectorsPage.tools.hideDetails": [
+   "0"
+  ],
+  "connectorsPage.tools.moreHints": [
+   "0"
+  ],
+  "connectorsPage.tools.needsAuthTitle": [
+   "0"
+  ],
+  "connectorsPage.tools.offTitle": [
+   "0"
+  ],
+  "connectorsPage.tools.searchCountPlaceholder": [
+   "0"
+  ],
+  "connectorsPage.tools.showAllTools": [
+   "0"
+  ],
+  "connectorsPage.tools.showDeprecated": [
+   "0"
+  ],
+  "connectorsPage.tools.showDetails": [
+   "0"
+  ],
+  "connectorsPage.tools.summaryCount": [
+   "0"
+  ],
+  "connectorsPage.tools.summaryPreviewTitle": [
+   "0"
+  ],
+  "connectorsPage.tools.summarySomeOn": [
+   "0",
+   "1"
+  ],
+  "connectorsPage.tools.summaryTitle": [
+   "0"
+  ],
+  "connectorsPage.tools.toolList": [
+   "0"
+  ],
+  "connectorsPage.tools.turnToolOff": [
+   "0"
+  ],
+  "connectorsPage.tools.turnToolOn": [
+   "0"
+  ],
+  "cron.control.lastCancelled": [
+   "0"
+  ],
+  "cron.count": [
+   "0"
+  ],
+  "cron.dayFallback": [
+   "0"
+  ],
+  "cron.everyDayAt": [
+   "0"
+  ],
+  "cron.everyDayOfWeekAt": [
+   "0",
+   "1"
+  ],
+  "cron.everyHourAt": [
+   "0"
+  ],
+  "cron.monthlyOnDayAt": [
+   "0",
+   "1"
+  ],
+  "cron.weekdaysAt": [
+   "0"
+  ],
+  "desktop.branchTitle": [
+   "0"
+  ],
+  "desktop.dropFilesMore": [
+   "0"
+  ],
+  "desktop.handoff.failed": [
+   "0"
+  ],
+  "desktop.handoff.success": [
+   "0"
+  ],
+  "desktop.handoff.systemNote": [
+   "0"
+  ],
+  "desktop.hydrationSyncing": [
+   "0"
+  ],
+  "desktop.modelSwitchConfirmTitle": [
+   "0"
+  ],
+  "desktop.newChatsProfile": [
+   "0"
+  ],
+  "desktop.noProfileNamed": [
+   "0",
+   "1"
+  ],
+  "desktop.profileStatus": [
+   "0"
+  ],
+  "desktop.skillCommandsAvailable": [
+   "0"
+  ],
+  "desktop.warningLine": [
+   "0"
+  ],
+  "fileMenu.deleteTitle": [
+   "0"
+  ],
+  "firstRun.localModel.text": [
+   "0",
+   "1"
+  ],
+  "firstRun.useName": [
+   "0"
+  ],
+  "freeTier.busyBody": [
+   "0"
+  ],
+  "freeTier.setupFailed.rateLimited": [
+   "0"
+  ],
+  "freeTier.statusLabel": [
+   "0"
+  ],
+  "install.authNeedsOauth": [
+   "0"
+  ],
+  "install.currentStage": [
+   "0"
+  ],
+  "install.lines": [
+   "0"
+  ],
+  "install.progress": [
+   "0",
+   "1"
+  ],
+  "install.signInWith": [
+   "0"
+  ],
+  "install.testSucceeded": [
+   "0",
+   "1"
+  ],
+  "install.unsupportedDesc": [
+   "0"
+  ],
+  "keybinds.conflictWith": [
+   "0"
+  ],
+  "keybinds.subtitle": [
+   "0"
+  ],
+  "messaging.advanced": [
+   "0"
+  ],
+  "messaging.approvedUser": [
+   "0"
+  ],
+  "messaging.approvedUsers": [
+   "0"
+  ],
+  "messaging.clearField": [
+   "0"
+  ],
+  "messaging.disableAria": [
+   "0"
+  ],
+  "messaging.enableAria": [
+   "0"
+  ],
+  "messaging.failedApprove": [
+   "0"
+  ],
+  "messaging.failedClear": [
+   "0"
+  ],
+  "messaging.failedRevoke": [
+   "0"
+  ],
+  "messaging.failedSave": [
+   "0"
+  ],
+  "messaging.failedUpdate": [
+   "0"
+  ],
+  "messaging.keyCleared": [
+   "0"
+  ],
+  "messaging.pendingAria": [
+   "0"
+  ],
+  "messaging.pendingRequests": [
+   "0"
+  ],
+  "messaging.platformDisabled": [
+   "0"
+  ],
+  "messaging.platformEnabled": [
+   "0"
+  ],
+  "messaging.revokeAria": [
+   "0"
+  ],
+  "messaging.revokeDesc": [
+   "0"
+  ],
+  "messaging.revokedUser": [
+   "0"
+  ],
+  "messaging.setupSaved": [
+   "0"
+  ],
+  "messaging.setupUpdated": [
+   "0"
+  ],
+  "messaging.telegramQr.expiresIn": [
+   "0"
+  ],
+  "messaging.telegramQr.savedRestartFailed": [
+   "0"
+  ],
+  "messaging.telegramQr.stillWaiting": [
+   "0"
+  ],
+  "messaging.waitingSince": [
+   "0"
+  ],
+  "modelPicker.limitReached": [
+   "0"
+  ],
+  "modelPicker.percentUsed": [
+   "0"
+  ],
+  "modelPicker.resetsIn": [
+   "0"
+  ],
+  "notifications.mcp.disableFailed": [
+   "0"
+  ],
+  "notifications.mcp.disabledMessage": [
+   "0"
+  ],
+  "notifications.mcp.errorMessage": [
+   "0"
+  ],
+  "notifications.mcp.needsAuthMessage": [
+   "0"
+  ],
+  "notifications.more": [
+   "0"
+  ],
+  "notifications.native.approvalTitleNamed": [
+   "0"
+  ],
+  "notifications.native.inputTitleNamed": [
+   "0"
+  ],
+  "notifications.updateReadyMessage": [
+   "0"
+  ],
+  "notifications.voice.liveUnavailable": [
+   "0"
+  ],
+  "notifications.voice.sayStopToEnd": [
+   "0"
+  ],
+  "onboarding.connectedPicking": [
+   "0"
+  ],
+  "onboarding.connectedProvider": [
+   "0"
+  ],
+  "onboarding.deviceCodeOpened": [
+   "0"
+  ],
+  "onboarding.docs": [
+   "0"
+  ],
+  "onboarding.externalPending": [
+   "0"
+  ],
+  "onboarding.openedBrowser": [
+   "0"
+  ],
+  "onboarding.price": [
+   "0",
+   "1"
+  ],
+  "onboarding.signInDidNotFinish": [
+   "0"
+  ],
+  "onboarding.signInWith": [
+   "0"
+  ],
+  "onboarding.startingSignIn": [
+   "0"
+  ],
+  "onboarding.verifyingCode": [
+   "0"
+  ],
+  "preview.binaryBody": [
+   "0"
+  ],
+  "preview.console.messages": [
+   "0"
+  ],
+  "preview.console.selected": [
+   "0"
+  ],
+  "preview.console.sentMessage": [
+   "0"
+  ],
+  "preview.largeBody": [
+   "0",
+   "1"
+  ],
+  "preview.missingBody": [
+   "0"
+  ],
+  "preview.noInlineBody": [
+   "0"
+  ],
+  "preview.saveFailed": [
+   "0"
+  ],
+  "preview.web.addComments": [
+   "0"
+  ],
+  "preview.web.commentTitle": [
+   "0"
+  ],
+  "preview.web.failedRestarting": [
+   "0"
+  ],
+  "preview.web.fileChanged": [
+   "0"
+  ],
+  "preview.web.filesChanged": [
+   "0",
+   "1"
+  ],
+  "preview.web.finishedRestarting": [
+   "0"
+  ],
+  "preview.web.loadFailedConsole": [
+   "0",
+   "1"
+  ],
+  "preview.web.lookingRestart": [
+   "0"
+  ],
+  "preview.web.openTarget": [
+   "0"
+  ],
+  "preview.web.startRestartFailed": [
+   "0"
+  ],
+  "preview.web.watchFailed": [
+   "0"
+  ],
+  "profiles.count": [
+   "0"
+  ],
+  "profiles.defaultSet": [
+   "0"
+  ],
+  "profiles.exportNeedsHost": [
+   "0"
+  ],
+  "profiles.fleet.deleteOn": [
+   "0"
+  ],
+  "profiles.fleet.gateway": [
+   "0"
+  ],
+  "profiles.fleet.gatewayUnreachable": [
+   "0"
+  ],
+  "profiles.fleet.onGateway": [
+   "0",
+   "1"
+  ],
+  "profiles.fleet.switchTo": [
+   "0",
+   "1"
+  ],
+  "profiles.invalidName": [
+   "0"
+  ],
+  "profiles.remoteOverride.authFailedMessage": [
+   "1",
+   "0"
+  ],
+  "profiles.remoteOverride.badge": [
+   "0"
+  ],
+  "profiles.remoteOverride.collisionWarning": [
+   "0"
+  ],
+  "profiles.remoteOverride.confirmNote": [
+   "0",
+   "1"
+  ],
+  "profiles.remoteOverride.removedMessage": [
+   "0"
+  ],
+  "profiles.remoteOverride.savedMessage": [
+   "0",
+   "1"
+  ],
+  "profiles.remoteOverride.title": [
+   "0"
+  ],
+  "profiles.setColor": [
+   "0"
+  ],
+  "profiles.skills": [
+   "0"
+  ],
+  "profiles.soulPlaceholder": [
+   "0"
+  ],
+  "profiles.status.needsInput": [
+   "0"
+  ],
+  "profiles.status.unread": [
+   "0"
+  ],
+  "profiles.status.working": [
+   "0"
+  ],
+  "profiles.switchConnectionFailed": [
+   "0"
+  ],
+  "profiles.switchToConnection": [
+   "0"
+  ],
+  "profiles.switchToProfile": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.error": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.historyHeader": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.processesHeader": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.restored": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.rewound": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.rollbackFailed": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.savedOnHost": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.savedTo": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.subagentsHeader": [
+   "0"
+  ],
+  "promptNotices.desktopCommands.toolCalls": [
+   "0"
+  ],
+  "promptNotices.mcpReloadUnavailable": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.busy": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.busyCompressing": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.countOne": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.countOther": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.queued": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.steerNoActiveTurn": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.steerQueued": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.undidOne": [
+   "0"
+  ],
+  "promptNotices.sessionCommands.undidOther": [
+   "0"
+  ],
+  "prompts.vaultCodeDesc": [
+   "0"
+  ],
+  "prompts.vaultCodeTitle": [
+   "0"
+  ],
+  "prompts.vaultSaveDesc": [
+   "0"
+  ],
+  "prompts.vaultSaveTitle": [
+   "0"
+  ],
+  "prompts.vaultUnlockDesc": [
+   "0",
+   "0"
+  ],
+  "prompts.vaultUnlockTitle": [
+   "0"
+  ],
+  "remoteDisplayBanner.message": [
+   "0"
+  ],
+  "rightSidebar.couldNotPreview": [
+   "0"
+  ],
+  "rightSidebar.folderTip": [
+   "0"
+  ],
+  "rightSidebar.remotePickerCreateFolderFailed": [
+   "0"
+  ],
+  "rightSidebar.terminalDropControl": [
+   "0"
+  ],
+  "rightSidebar.terminalDropTooLarge": [
+   "1",
+   "0"
+  ],
+  "rightSidebar.terminalDropUnquotable": [
+   "0",
+   "1"
+  ],
+  "rightSidebar.terminalDropUploadFailed": [
+   "0"
+  ],
+  "rightSidebar.unreadableBody": [
+   "0"
+  ],
+  "sendDiagnostics.uploadIdFallback": [
+   "0"
+  ],
+  "settings.about.channel.branch": [
+   "0"
+  ],
+  "settings.about.channel.heldBody": [
+   "0",
+   "0"
+  ],
+  "settings.about.channel.latestRelease": [
+   "0"
+  ],
+  "settings.about.channel.rollbackAction": [
+   "0"
+  ],
+  "settings.about.channel.rollbackBody": [
+   "0"
+  ],
+  "settings.about.channel.rollbackTitle": [
+   "0"
+  ],
+  "settings.appearance.embedsReset": [
+   "0"
+  ],
+  "settings.appearance.installed": [
+   "0"
+  ],
+  "settings.appearance.pet.adoptFailed": [
+   "0"
+  ],
+  "settings.appearance.pet.count": [
+   "0"
+  ],
+  "settings.appearance.pet.countCapped": [
+   "0",
+   "1"
+  ],
+  "settings.appearance.pet.delete": [
+   "0"
+  ],
+  "settings.appearance.pet.deleteTitle": [
+   "0"
+  ],
+  "settings.appearance.pet.exportFailed": [
+   "0"
+  ],
+  "settings.appearance.pet.exportPet": [
+   "0"
+  ],
+  "settings.appearance.pet.noMatch": [
+   "0"
+  ],
+  "settings.appearance.pet.rename": [
+   "0"
+  ],
+  "settings.appearance.pet.renameFailed": [
+   "0"
+  ],
+  "settings.appearance.pet.uninstall": [
+   "0"
+  ],
+  "settings.appearance.pet.uninstallFailed": [
+   "0"
+  ],
+  "settings.appearance.themeProfileNote": [
+   "0"
+  ],
+  "settings.appearance.tipsReset": [
+   "0"
+  ],
+  "settings.appearance.uiScaleDesc": [
+   "0"
+  ],
+  "settings.billing.amountValidation.decimal": [
+   "0"
+  ],
+  "settings.billing.amountValidation.maximum": [
+   "0",
+   "1"
+  ],
+  "settings.billing.amountValidation.minimum": [
+   "0",
+   "1"
+  ],
+  "settings.billing.amountValidation.positive": [
+   "0"
+  ],
+  "settings.billing.buyCredits.added": [
+   "0"
+  ],
+  "settings.billing.charge.added": [
+   "0"
+  ],
+  "settings.billing.charge.failedBody": [
+   "0"
+  ],
+  "settings.billing.charge.unconfirmedBody": [
+   "0"
+  ],
+  "settings.billing.creditsPerMonth": [
+   "0"
+  ],
+  "settings.billing.errors.monthlyCapExceeded.messageHeadroom": [
+   "0"
+  ],
+  "settings.billing.errors.remoteSpendingReconnect": [
+   "0"
+  ],
+  "settings.billing.perMonth": [
+   "0"
+  ],
+  "settings.billing.plan.alreadyOn": [
+   "0"
+  ],
+  "settings.billing.plan.effectScheduled": [
+   "0",
+   "1",
+   "2"
+  ],
+  "settings.billing.state.autoRefill.chargesDescription": [
+   "0",
+   "1"
+  ],
+  "settings.billing.state.autoRefill.distinctCardCaption": [
+   "0"
+  ],
+  "settings.billing.state.paymentMethod.provenance.suffix": [
+   "0"
+  ],
+  "settings.billing.state.planCard.cancellationCaption": [
+   "0"
+  ],
+  "settings.billing.state.planCard.downgradeCaption": [
+   "0",
+   "1"
+  ],
+  "settings.billing.state.planCard.renewsCaption": [
+   "0"
+  ],
+  "settings.billing.state.usage.monthlyCap.valueUsed": [
+   "0",
+   "1"
+  ],
+  "settings.billing.state.usage.subscriptionCredits.captionResets": [
+   "0"
+  ],
+  "settings.billing.state.usage.subscriptionCredits.valueOf": [
+   "0",
+   "1"
+  ],
+  "settings.billing.state.usage.subscriptionCredits.valueOver": [
+   "0",
+   "1",
+   "2"
+  ],
+  "settings.billing.state.usage.window.barLabel": [
+   "0"
+  ],
+  "settings.billing.state.usage.window.captionResetsIn": [
+   "0"
+  ],
+  "settings.billing.state.usage.window.valueUsed": [
+   "0"
+  ],
+  "settings.billing.usageLabel": [
+   "0"
+  ],
+  "settings.connections.duplicateSsh": [
+   "0"
+  ],
+  "settings.connections.duplicateUrl": [
+   "0"
+  ],
+  "settings.connections.removeConfirmDesc": [
+   "0"
+  ],
+  "settings.connections.sameBackendHint": [
+   "0"
+  ],
+  "settings.credentials.pasteLabelKey": [
+   "0"
+  ],
+  "settings.customEndpoints.deleteConfirm": [
+   "0"
+  ],
+  "settings.customEndpoints.endpointReachableModels": [
+   "0",
+   "1"
+  ],
+  "settings.customEndpoints.endpointReachableTransport": [
+   "0"
+  ],
+  "settings.gateway.authNeedsOauth": [
+   "0"
+  ],
+  "settings.gateway.cloudConnectedTo": [
+   "0"
+  ],
+  "settings.gateway.cloudOrgRole": [
+   "0"
+  ],
+  "settings.gateway.cloudStatusLabel": [
+   "0"
+  ],
+  "settings.gateway.connectedTo": [
+   "0",
+   "1"
+  ],
+  "settings.gateway.existingToken": [
+   "0"
+  ],
+  "settings.gateway.signInWith": [
+   "0"
+  ],
+  "settings.gateway.sshReachable": [
+   "0",
+   "1"
+  ],
+  "settings.gateway.webAccess.modeLanDetail": [
+   "0"
+  ],
+  "settings.gateway.webAccess.modePublicDetail": [
+   "0"
+  ],
+  "settings.gateway.webAccess.restartFailedBecause": [
+   "0"
+  ],
+  "settings.gateway.webAccess.unavailableDetail": [
+   "0"
+  ],
+  "settings.localModels.activateDoneToast": [
+   "0"
+  ],
+  "settings.localModels.activateFailed": [
+   "0"
+  ],
+  "settings.localModels.browseDownloadAria": [
+   "name"
+  ],
+  "settings.localModels.browseDownloadStarted": [
+   "name"
+  ],
+  "settings.localModels.deleteConfirm": [
+   "0"
+  ],
+  "settings.localModels.deleted": [
+   "0"
+  ],
+  "settings.localModels.downloadAction": [
+   "0"
+  ],
+  "settings.localModels.downloadDoneToast": [
+   "0"
+  ],
+  "settings.localModels.downloadEta": [
+   "0"
+  ],
+  "settings.localModels.downloadEtaHours": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.downloadEtaMinutes": [
+   "0"
+  ],
+  "settings.localModels.downloadEtaSeconds": [
+   "0"
+  ],
+  "settings.localModels.downloadFailed": [
+   "0"
+  ],
+  "settings.localModels.downloadPauseFailed": [
+   "0"
+  ],
+  "settings.localModels.downloadProgress": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.downloadResumeFailed": [
+   "0"
+  ],
+  "settings.localModels.downloadSpeed": [
+   "0"
+  ],
+  "settings.localModels.pillFullContext": [
+   "0"
+  ],
+  "settings.localModels.pillUpTo": [
+   "0"
+  ],
+  "settings.localModels.quickstartDetail": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.quickstartDetailReady": [
+   "0"
+  ],
+  "settings.localModels.quickstartDoneToast": [
+   "0"
+  ],
+  "settings.localModels.ram": [
+   "0"
+  ],
+  "settings.localModels.runtimeInstalledDetail": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.runtimeReady": [
+   "0"
+  ],
+  "settings.localModels.sideloadDone": [
+   "name"
+  ],
+  "settings.localModels.upToDateDetail": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.updateDetail": [
+   "0",
+   "1"
+  ],
+  "settings.localModels.vram": [
+   "0"
+  ],
+  "settings.managedUpdates.receipt": [
+   "0",
+   "1"
+  ],
+  "settings.managedUpdates.receiptVersions": [
+   "0",
+   "1"
+  ],
+  "settings.managedUpdates.scopeNotRestored": [
+   "0",
+   "1"
+  ],
+  "settings.managedUpdates.scopesRestored": [
+   "0"
+  ],
+  "settings.mcp.authenticatedMessage": [
+   "0",
+   "1"
+  ],
+  "settings.mcp.capabilitySummary": [
+   "0",
+   "1",
+   "2"
+  ],
+  "settings.mcp.catalogInstallFailed": [
+   "0"
+  ],
+  "settings.mcp.costTokens": [
+   "0"
+  ],
+  "settings.mcp.deepLinkNameConflict": [
+   "0"
+  ],
+  "settings.mcp.savedMessage": [
+   "0"
+  ],
+  "settings.mcp.usage30d": [
+   "0"
+  ],
+  "settings.memoryLayers.onlyFile": [
+   "0"
+  ],
+  "settings.memoryLayers.providerDesc": [
+   "0"
+  ],
+  "settings.memoryLayers.providerNotReadyDesc": [
+   "0"
+  ],
+  "settings.memoryLayers.providerUnknownDesc": [
+   "0"
+  ],
+  "settings.memoryLayers.selectedDesc": [
+   "0"
+  ],
+  "settings.model.followTask": [
+   "0"
+  ],
+  "settings.model.inheritsFrom": [
+   "0"
+  ],
+  "settings.model.mainAppliedMessage": [
+   "0"
+  ],
+  "settings.model.moaReferenceTitle": [
+   "0"
+  ],
+  "settings.model.moaReferenceToggle": [
+   "1"
+  ],
+  "settings.model.setUpProvider": [
+   "0"
+  ],
+  "settings.model.staleAuxBefore": [
+   "0",
+   "1"
+  ],
+  "settings.model.subagents.routing.baseUrlRoute": [
+   "0"
+  ],
+  "settings.model.subagents.routing.blockedUnavailable": [
+   "0"
+  ],
+  "settings.model.subagents.routing.blockedUnregistered": [
+   "0"
+  ],
+  "settings.model.subagents.routing.deleteConfirmNextDefault": [
+   "0"
+  ],
+  "settings.model.subagents.routing.deleteConfirmTitle": [
+   "0"
+  ],
+  "settings.model.subagents.routing.inactiveModelMap": [
+   "0"
+  ],
+  "settings.model.subagents.routing.inactivePlugin": [
+   "0"
+  ],
+  "settings.model.subagents.routing.inactiveProfiles": [
+   "0"
+  ],
+  "settings.model.subagents.routing.profileMissing": [
+   "0"
+  ],
+  "settings.model.subagents.routing.routeActions": [
+   "0"
+  ],
+  "settings.pluginPages.pageCount": [
+   "0"
+  ],
+  "settings.plugins.installModal.agentSuccess": [
+   "0"
+  ],
+  "settings.plugins.installModal.agentTargetLocal": [
+   "0",
+   "1"
+  ],
+  "settings.plugins.installModal.agentTargetRemote": [
+   "0"
+  ],
+  "settings.plugins.installModal.alreadyInstalled": [
+   "0"
+  ],
+  "settings.plugins.installModal.desktopSuccess": [
+   "0"
+  ],
+  "settings.plugins.installModal.installsAndEnables": [
+   "0"
+  ],
+  "settings.plugins.installModal.installsOnly": [
+   "0"
+  ],
+  "settings.plugins.installModal.missingEnv": [
+   "0",
+   "1"
+  ],
+  "settings.plugins.installModal.partialInstall": [
+   "0"
+  ],
+  "settings.plugins.installModal.reviewedPin": [
+   "0"
+  ],
+  "settings.plugins.installModal.serverNotConnected": [
+   "0",
+   "1"
+  ],
+  "settings.plugins.installModal.sourceMoved": [
+   "0"
+  ],
+  "settings.plugins.installModal.toolsConnected": [
+   "0"
+  ],
+  "settings.profileScope.editsProfile": [
+   "0"
+  ],
+  "settings.providers.failedRemove": [
+   "0"
+  ],
+  "settings.providers.removeConfirm": [
+   "0"
+  ],
+  "settings.providers.removeExternalGeneric": [
+   "0"
+  ],
+  "settings.providers.removeKeyManaged": [
+   "0"
+  ],
+  "settings.providers.removeTerminalConfirm": [
+   "0",
+   "1"
+  ],
+  "settings.providers.removeTerminalRunning": [
+   "0"
+  ],
+  "settings.providers.removedMessage": [
+   "0"
+  ],
+  "settings.sessions.defaultDirUpdated": [
+   "0"
+  ],
+  "settings.sessions.defaultsTo": [
+   "0"
+  ],
+  "settings.sessions.deleteConfirm": [
+   "0"
+  ],
+  "settings.sessions.messages": [
+   "0"
+  ],
+  "settings.toolsets.failedRemove": [
+   "0"
+  ],
+  "settings.toolsets.failedReveal": [
+   "0"
+  ],
+  "settings.toolsets.failedSave": [
+   "0"
+  ],
+  "settings.toolsets.failedSelect": [
+   "0"
+  ],
+  "settings.toolsets.failedSelectCapability": [
+   "0"
+  ],
+  "settings.toolsets.failedSelectModel": [
+   "0"
+  ],
+  "settings.toolsets.modelCount": [
+   "0"
+  ],
+  "settings.toolsets.modelSelectedMessage": [
+   "0"
+  ],
+  "settings.toolsets.nousAuthNeededMessage": [
+   "0"
+  ],
+  "settings.toolsets.postSetupCompleteMessage": [
+   "0"
+  ],
+  "settings.toolsets.postSetupErrorMessage": [
+   "0"
+  ],
+  "settings.toolsets.postSetupFailed": [
+   "0"
+  ],
+  "settings.toolsets.postSetupHint": [
+   "0"
+  ],
+  "settings.toolsets.removeConfirm": [
+   "0"
+  ],
+  "settings.toolsets.removedMessage": [
+   "0"
+  ],
+  "settings.toolsets.savedMessage": [
+   "0"
+  ],
+  "settings.toolsets.selectedMessage": [
+   "0"
+  ],
+  "settings.toolsets.terminalBackend.failedSelect": [
+   "0"
+  ],
+  "settings.toolsets.terminalBackend.needsSetupConfirmDescription": [
+   "0"
+  ],
+  "settings.toolsets.terminalBackend.needsSetupConfirmTitle": [
+   "0"
+  ],
+  "settings.toolsets.terminalBackend.selectedMessage": [
+   "0"
+  ],
+  "settings.toolsets.terminalBackend.unavailableMessage": [
+   "0",
+   "0"
+  ],
+  "settings.toolsets.webCapabilitySelectedMessage": [
+   "0",
+   "1"
+  ],
+  "settings.toolsets.webExtractActive": [
+   "0"
+  ],
+  "settings.toolsets.webSearchActive": [
+   "0"
+  ],
+  "settings.uninstallSection.confirmBody": [
+   "0"
+  ],
+  "settings.uninstallSection.dataKept": [
+   "0"
+  ],
+  "settings.vault.count": [
+   "0"
+  ],
+  "settings.vault.createdOn": [
+   "0"
+  ],
+  "settings.vault.deleteDescription": [
+   "0"
+  ],
+  "settings.vault.identifierShown": [
+   "0"
+  ],
+  "settings.vault.sources.notInstalled": [
+   "0"
+  ],
+  "settings.vault.sources.unlockTitle": [
+   "0"
+  ],
+  "settings.vault.sources.unlocked": [
+   "0"
+  ],
+  "shell.approvalMode.ariaLabel": [
+   "0"
+  ],
+  "shell.gatewayMenu.connection": [
+   "0"
+  ],
+  "shell.modelMenu.limitedTip": [
+   "0",
+   "1"
+  ],
+  "shell.modelMenu.limitedUntil": [
+   "0"
+  ],
+  "shell.modelMenu.localSetup.text": [
+   "0",
+   "1"
+  ],
+  "shell.modelMenu.modelLimitedTip": [
+   "0"
+  ],
+  "shell.modelMenu.modelResets": [
+   "0"
+  ],
+  "shell.modelMenu.pickDeferred": [
+   "0"
+  ],
+  "shell.modelMenu.poolAccount": [
+   "0"
+  ],
+  "shell.modelMenu.poolAccounts": [
+   "0"
+  ],
+  "shell.modelMenu.poolLimited": [
+   "0",
+   "1"
+  ],
+  "shell.modelMenu.priceTitle": [
+   "0",
+   "1",
+   "2"
+  ],
+  "shell.modelMenu.usageLeft": [
+   "0",
+   "1"
+  ],
+  "shell.modelMenu.usageTip": [
+   "0"
+  ],
+  "shell.modelMenu.usageWindow": [
+   "0",
+   "1",
+   "2"
+  ],
+  "shell.modelOptions.sendsOnRoute": [
+   "0"
+  ],
+  "shell.statusbar.backendLabel": [
+   "0"
+  ],
+  "shell.statusbar.backendVersion": [
+   "0"
+  ],
+  "shell.statusbar.branch": [
+   "0"
+  ],
+  "shell.statusbar.clientLabel": [
+   "0"
+  ],
+  "shell.statusbar.commit": [
+   "0"
+  ],
+  "shell.statusbar.commitsBehind": [
+   "0",
+   "1"
+  ],
+  "shell.statusbar.compressions": [
+   "0"
+  ],
+  "shell.statusbar.connectionCloud": [
+   "0"
+  ],
+  "shell.statusbar.connectionCloudTooltip": [
+   "0"
+  ],
+  "shell.statusbar.connectionRemote": [
+   "0"
+  ],
+  "shell.statusbar.connectionRemoteTooltip": [
+   "0"
+  ],
+  "shell.statusbar.connectionSsh": [
+   "0"
+  ],
+  "shell.statusbar.connectionSshTooltip": [
+   "0"
+  ],
+  "shell.statusbar.contextUsagePanel.percentFull": [
+   "0"
+  ],
+  "shell.statusbar.contextUsagePanel.tokenSummary": [
+   "0",
+   "1"
+  ],
+  "shell.statusbar.desktopVersion": [
+   "0"
+  ],
+  "shell.statusbar.failed": [
+   "0"
+  ],
+  "shell.statusbar.messagingDegraded": [
+   "0"
+  ],
+  "shell.statusbar.modelTitle": [
+   "0",
+   "1"
+  ],
+  "shell.statusbar.planUsageTitle": [
+   "0",
+   "1"
+  ],
+  "shell.statusbar.providerModelTitle": [
+   "0",
+   "1"
+  ],
+  "shell.statusbar.releaseAvailable": [
+   "0"
+  ],
+  "shell.statusbar.running": [
+   "0"
+  ],
+  "shell.statusbar.subagents": [
+   "0"
+  ],
+  "sidebar.loadCount": [
+   "0"
+  ],
+  "sidebar.messageCount": [
+   "0"
+  ],
+  "sidebar.newSessionIn": [
+   "0"
+  ],
+  "sidebar.noMatch": [
+   "0"
+  ],
+  "sidebar.projects.enter": [
+   "0"
+  ],
+  "sidebar.projects.movedTo": [
+   "0"
+  ],
+  "sidebar.projects.reorder": [
+   "0"
+  ],
+  "sidebar.projects.showAllCount": [
+   "0"
+  ],
+  "sidebar.projects.toggle": [
+   "0"
+  ],
+  "sidebar.row.deleteDesc": [
+   "0"
+  ],
+  "sidebar.row.handoffOrigin": [
+   "0"
+  ],
+  "sidebar.row.messageCount": [
+   "0"
+  ],
+  "sidebar.row.ownedByProfile": [
+   "0"
+  ],
+  "sidebar.row.untitledChat": [
+   "0"
+  ],
+  "sidebar.showMoreIn": [
+   "0",
+   "1"
+  ],
+  "sidebar.storageCorrupt.body": [
+   "0"
+  ],
+  "sidebar.toolCallCount": [
+   "0"
+  ],
+  "skillDeepLink.installComplete": [
+   "0"
+  ],
+  "skillDeepLink.installTitle": [
+   "0"
+  ],
+  "skills.appliesToNewSessions": [
+   "0"
+  ],
+  "skills.bulkUpdated": [
+   "0"
+  ],
+  "skills.configureToolset": [
+   "0"
+  ],
+  "skills.emptyNoneAvailable": [
+   "0"
+  ],
+  "skills.emptyNoneFound": [
+   "0"
+  ],
+  "skills.emptyNothingMatches": [
+   "0"
+  ],
+  "skills.failedToUpdate": [
+   "0"
+  ],
+  "skills.hub.alreadyInstalled": [
+   "0"
+  ],
+  "skills.hub.findings": [
+   "0"
+  ],
+  "skills.hub.installBlockedTitle": [
+   "0"
+  ],
+  "skills.hub.installStarted": [
+   "0"
+  ],
+  "skills.hub.resultCount": [
+   "0",
+   "1"
+  ],
+  "skills.hub.timedOut": [
+   "0"
+  ],
+  "skills.hub.uninstallStarted": [
+   "0"
+  ],
+  "skills.plugins.alreadyInstalled": [
+   "0"
+  ],
+  "skills.plugins.catalogProvenance": [
+   "0"
+  ],
+  "skills.plugins.deepLinkCatalogUnknown": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.hint": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.loadFailed": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.pickerTitle": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.refusedProtected": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.revokeFailed": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.revokeLabel": [
+   "0"
+  ],
+  "skills.plugins.folderAccess.revoked": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.halfAgentIn": [
+   "0"
+  ],
+  "skills.plugins.installAgentHereTip": [
+   "0"
+  ],
+  "skills.plugins.pinnedBadge": [
+   "0"
+  ],
+  "skills.plugins.pinnedProvenance": [
+   "0"
+  ],
+  "skills.plugins.previewScriptPromptBody": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.previewScriptPromptTitle": [
+   "0"
+  ],
+  "skills.plugins.previewScriptRevoke": [
+   "0"
+  ],
+  "skills.plugins.previewScriptRevokeUnsaved": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.previewScriptRevoked": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.settingsForm.saveFailed": [
+   "0"
+  ],
+  "skills.plugins.settingsForm.saved": [
+   "0"
+  ],
+  "skills.plugins.settingsForm.secretStoredAs": [
+   "0"
+  ],
+  "skills.plugins.settingsToggle": [
+   "0"
+  ],
+  "skills.plugins.toggleFailed": [
+   "0"
+  ],
+  "skills.plugins.toolsetOff": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.toolsetOn": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.toolsetToggleFailed": [
+   "0"
+  ],
+  "skills.plugins.uninstallConfirmBody": [
+   "1"
+  ],
+  "skills.plugins.uninstallConfirmTitle": [
+   "0"
+  ],
+  "skills.plugins.uninstallDesktopConfirmBody": [
+   "0"
+  ],
+  "skills.plugins.uninstallDesktopTip": [
+   "0"
+  ],
+  "skills.plugins.uninstallFailed": [
+   "0"
+  ],
+  "skills.plugins.uninstallTip": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.uninstalled": [
+   "0"
+  ],
+  "skills.plugins.uninstalledDesktop": [
+   "0"
+  ],
+  "skills.plugins.updateConsentBody": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.updateConsentTitle": [
+   "0"
+  ],
+  "skills.plugins.updateFailed": [
+   "0"
+  ],
+  "skills.plugins.updateScanBlocked": [
+   "0"
+  ],
+  "skills.plugins.updateScanBody": [
+   "0",
+   "1"
+  ],
+  "skills.plugins.updateScanMore": [
+   "0"
+  ],
+  "skills.plugins.updateScanTitle": [
+   "0"
+  ],
+  "skills.plugins.updateToPin": [
+   "0"
+  ],
+  "skills.plugins.updated": [
+   "0"
+  ],
+  "skills.plugins.updatedGit": [
+   "0"
+  ],
+  "skills.toggleToolset": [
+   "0"
+  ],
+  "skills.toolsetsEnabled": [
+   "0",
+   "1"
+  ],
+  "skills.usageCount": [
+   "0"
+  ],
+  "starmap.importSuccess": [
+   "0"
+  ],
+  "starmap.subtitle": [
+   "0",
+   "1"
+  ],
+  "statusStack.background": [
+   "0"
+  ],
+  "statusStack.coding.ahead": [
+   "0"
+  ],
+  "statusStack.coding.behind": [
+   "0"
+  ],
+  "statusStack.coding.branchOffFrom": [
+   "0"
+  ],
+  "statusStack.coding.changed": [
+   "0"
+  ],
+  "statusStack.coding.commitPlaceholder": [
+   "0"
+  ],
+  "statusStack.coding.switchFailed": [
+   "0"
+  ],
+  "statusStack.coding.switchTo": [
+   "0"
+  ],
+  "statusStack.control.actionFailed": [
+   "0"
+  ],
+  "statusStack.control.controlUnavailable": [
+   "0"
+  ],
+  "statusStack.control.copyCriterion": [
+   "0"
+  ],
+  "statusStack.control.criteriaHeader": [
+   "0"
+  ],
+  "statusStack.control.gateAttempts": [
+   "0",
+   "1"
+  ],
+  "statusStack.control.gateLastExit": [
+   "0"
+  ],
+  "statusStack.control.gateTimeout": [
+   "0"
+  ],
+  "statusStack.control.goalActiveTurns": [
+   "0",
+   "1"
+  ],
+  "statusStack.control.goalDoneTurns": [
+   "0"
+  ],
+  "statusStack.control.goalTurn": [
+   "0"
+  ],
+  "statusStack.control.heartbeatEveryHours": [
+   "0"
+  ],
+  "statusStack.control.heartbeatEveryMinutes": [
+   "0"
+  ],
+  "statusStack.control.heartbeatEverySeconds": [
+   "0"
+  ],
+  "statusStack.control.heartbeatFiredCount": [
+   "0"
+  ],
+  "statusStack.control.heartbeatNext": [
+   "0"
+  ],
+  "statusStack.control.loopEveryHours": [
+   "0"
+  ],
+  "statusStack.control.loopEveryMinutes": [
+   "0"
+  ],
+  "statusStack.control.loopEverySeconds": [
+   "0"
+  ],
+  "statusStack.control.loopNext": [
+   "0"
+  ],
+  "statusStack.control.loopRunCount": [
+   "0",
+   "1"
+  ],
+  "statusStack.control.loopRuns": [
+   "0"
+  ],
+  "statusStack.control.removeCriterion": [
+   "0"
+  ],
+  "statusStack.control.removeCriterionConfirmBody": [
+   "0"
+  ],
+  "statusStack.control.removeCriterionConfirmTitle": [
+   "0"
+  ],
+  "statusStack.control.waitPid": [
+   "0"
+  ],
+  "statusStack.control.waitSession": [
+   "0"
+  ],
+  "statusStack.control.waitUntil": [
+   "0"
+  ],
+  "statusStack.exit": [
+   "0"
+  ],
+  "statusStack.previousTodos": [
+   "0",
+   "1"
+  ],
+  "statusStack.subagents": [
+   "0"
+  ],
+  "statusStack.todos": [
+   "0",
+   "1"
+  ],
+  "titlebar.layoutEditorTitle": [
+   "0"
+  ],
+  "titlebar.unreadSessions": [
+   "0"
+  ],
+  "updates.applyStatus.owed": [
+   "0"
+  ],
+  "updates.availableBodyRelease": [
+   "0"
+  ],
+  "updates.daysAgo": [
+   "0"
+  ],
+  "updates.hoursAgo": [
+   "0"
+  ],
+  "updates.lastChecked": [
+   "0"
+  ],
+  "updates.minAgo": [
+   "0"
+  ],
+  "updates.moreChanges": [
+   "0"
+  ],
+  "updates.pidLabel": [
+   "0"
+  ],
+  "updates.portLabel": [
+   "0"
+  ],
+  "updates.releaseAvailable": [
+   "0"
+  ],
+  "updates.updateReady": [
+   "0"
+  ],
+  "updates.version": [
+   "0"
+  ],
+  "webhooks.createFailed": [
+   "0"
+  ],
+  "webhooks.deleteFailed": [
+   "0"
+  ],
+  "webhooks.disabled": [
+   "0"
+  ],
+  "webhooks.enabled": [
+   "0"
+  ],
+  "webhooks.restartFailed": [
+   "0"
+  ],
+  "webhooks.subscriptions": [
+   "0"
+  ],
+  "webhooks.toggleFailed": [
+   "0"
+  ],
+  "zones.customZoneName": [
+   "0"
+  ],
+  "zones.deletePreset": [
+   "0"
+  ],
+  "zones.hideStripTab": [
+   "0"
+  ],
+  "zones.layoutNamePlaceholder": [
+   "0"
+  ],
+  "zones.mergeZones": [
+   "0"
+  ],
+  "zones.missingPane": [
+   "0"
+  ],
+  "zones.pluginDisabled": [
+   "0"
+  ],
+  "zones.showStripTab": [
+   "0"
+  ],
+  "zones.tabActions": [
+   "0"
+  ],
+  "zones.tabCount": [
+   "0"
+  ],
+  "zones.toggleStripTab": [
+   "0"
+  ],
+  "zones.zoneCount": [
+   "0"
+  ],
+  "zones.zoneMenuLabel": [
+   "0"
+  ],
+  "zones.zoneTag": [
+   "0"
+  ]
+ }
+}

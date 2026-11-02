@@ -5,6 +5,8 @@ CLI/gateway, the Ink TUI and the Desktop app, in `pt-br`.
 
 Text-only plugin: no Python, no `desktop/plugin.js`, no network, no permissions. Just catalogs.
 
+What changed in each release: [CHANGELOG.md](CHANGELOG.md).
+
 ## Install
 
 ```bash
@@ -26,7 +28,7 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 |---|---|---|---|
 | Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,515 | **100%** of the English core catalog at `main` @ `25b50015` |
 | TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,390 | **100%** of the English TUI catalog at `main` @ `25b50015` |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | 92.7% of the English desktop catalog at `main` @ `25b50015` — the desktop resync is the next PR: 402 new keys to translate, 53 retired upstream to drop |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,517 | **99.9%** — every translatable string at `main` @ `25b50015`; the 4 remaining reference keys are arrays/structured values a text pack cannot carry |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
@@ -35,7 +37,8 @@ contribution — before this pack the Desktop app had no Portuguese at all.
 The catalogs track `NousResearch/hermes-agent@main`, which moves every day — so every figure on this
 page names the revision it was measured against, and `python tools/drift.py` prints the gap against the
 current `main`. At the last resync every translatable key existed and every value was translated;
-array- and function-valued entries stay in TypeScript, because a text pack cannot carry them. On a
+function-valued entries are carried as strings with positional `{0}` placeholders, and array- or
+object-valued entries stay in TypeScript, because a text pack cannot carry them. On a
 *release* older than the latest `main`,
 `hermes plugins validate` lists the keys upstream added since that release as "not in the English
 catalog (ignored at runtime)" — those are warnings, never errors, and the strings are simply not
@@ -45,14 +48,17 @@ keys upstream has since deleted, which is worse.
 
 ## Where the translations come from
 
-Ported from the renderer-only `pt` catalog in
+The **Desktop** catalog started as a port of the renderer-only `pt` catalog in
 [StudioCodeAI/hermes-agent `feature/i18n-pt-br`](https://github.com/StudioCodeAI/hermes-agent/tree/feature/i18n-pt-br)
-(PR [NousResearch/hermes-agent#92590](https://github.com/NousResearch/hermes-agent/pull/92590)).
+(PR [NousResearch/hermes-agent#92590](https://github.com/NousResearch/hermes-agent/pull/92590)), which
+was closed unmerged upstream. That fork is **no longer part of the pipeline**: since v1.2.3
+`pt-br.desktop.yaml` is the source of truth and is maintained directly, key by key, against the English
+export of `main`.
 
-`apps/desktop/src/i18n/pt_*.ts` was bundled with esbuild, composed exactly like `pt.ts` does, flattened
-to dotted keys, and intersected with the English key export of `upstream/main`
-(`locales/_keys.desktop.json`). Keys upstream has since removed are dropped, so the pack never carries
-dead strings; the 38 dropped keys are listed when the build script runs.
+Two tools support that: `tools/emit-en.mjs` flattens the English bundle (the Desktop values live in
+TypeScript) when a resync needs it, and `tools/reference/en.desktop.placeholders.json` records the
+placeholder shape of the 741 keys that have one — so `tools/verify_pack.py` checks the Desktop surface
+with no fork and no build step.
 
 ## Credits and timeline
 
@@ -92,10 +98,13 @@ python tools/drift.py --drift    # non-zero exit when something drifted
 
 The routine when it fires:
 
-1. `node tools/build-desktop-pack.mjs` — refresh `pt-br.desktop.yaml` against the current English export.
-2. Translate the newly missing keys (the report lists them).
-3. `python tools/verify_pack.py --ref main` and `hermes plugins validate .` — both must pass.
-4. Commit, then open a **SHA-bump PR** for `plugin-catalog/hermes-lang-pt-br.yaml` in
+1. Translate the newly missing keys (the report lists them).
+2. Drop the keys the report marks stale — `main` no longer has them.
+3. If the Desktop surface moved, refresh its placeholder reference from an English checkout:
+   `node tools/emit-en.mjs desktop <out.json>`, then
+   `python tools/build-desktop-reference.py <out.json> tools/reference/en.desktop.placeholders.json <sha>`.
+4. `python tools/verify_pack.py --ref main` and `hermes plugins validate .` — both must pass.
+5. Commit, then open a **SHA-bump PR** for `plugin-catalog/hermes-lang-pt-br.yaml` in
    `NousResearch/hermes-agent` (catalogue rule 4: a SHA bump is a new PR).
 
 Nothing updates an installed copy on its own — by design, a listed plugin may not self-update
@@ -120,7 +129,8 @@ files from `NousResearch/hermes-agent` over HTTPS and checks, per surface:
 
 1. every catalog parses and every leaf is text;
 2. every key exists in the English reference for that surface;
-3. core values keep the English `{placeholder}` set exactly;
+3. placeholders keep the English shape — core against `locales/en.yaml`, Desktop against the committed
+   `tools/reference/en.desktop.placeholders.json`;
 4. braces are balanced in every value;
 5. no duplicate keys.
 
@@ -131,21 +141,18 @@ python tools/verify_pack.py --json                 # machine-readable report
 python tools/verify_pack.py --min-desktop-coverage 0.80
 ```
 
-Current result against `main` @ `25b50015` (2026-11-02): **PASS**, 1 warning (the 53 desktop keys `main`
-has since retired), 0 errors.
+Current result against `main` @ `25b50015` (2026-11-02): **PASS**, no warnings, 0 errors.
 
 ```
 - core     locales/pt-br.yaml:         3515 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 - tui      locales/pt-br.tui.yaml:     1390 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
-- desktop  locales/pt-br.desktop.yaml: 5172 key(s),  92.7% of the English catalog, 53 unknown, 0 placeholder mismatch(es)
+- desktop  locales/pt-br.desktop.yaml: 5517 key(s),  99.9% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 ```
 
-Verified against that revision: **0 placeholder/key divergences** on all three surfaces
-(core 3,515/3,515 · TUI 1,390/1,390 · Desktop 5,119/5,521 — the numerators are the keys that match the
-English reference, which is what the coverage column divides by; the retired keys are reported as
-warnings and ignored at runtime, and 4 known reference keys are arrays or structured values a text pack
-cannot carry: `composer.followUpPlaceholders`, `composer.newSessionPlaceholders`, `intro.custom`,
-`sidebar.projects.branchOff`).
+Verified against that revision: **0 unknown keys and 0 placeholder divergences** on all three surfaces
+(core 3,515/3,515 · TUI 1,390/1,390 · Desktop 5,517/5,521 — the 4 remaining reference keys are arrays
+or structured values a text pack cannot carry: `composer.followUpPlaceholders`,
+`composer.newSessionPlaceholders`, `intro.custom`, `sidebar.projects.branchOff`).
 
 The two `caution` hits from the install scanner are false positives on translated prose: a
 `… install.sh | sh` URL inside a translated error message, and an "update AGENTS.md" string.

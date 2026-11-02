@@ -59,8 +59,10 @@ jobs:
           {
             cat report.md
             printf '\n\n---\n\nOpened by `.github/workflows/drift.yml`. Sync with\n'
-            printf '`python tools/build-desktop-pack.mjs` + translate the new keys, then bump the\n'
-            printf 'catalog pin in a new PR to NousResearch/hermes-agent.\n'
+            printf '`translate the new keys (the report lists them), drop the stale ones, then bump the\n'
+            printf 'catalog pin in a new PR to NousResearch/hermes-agent. For the Desktop surface, refresh\n'
+            printf '`tools/reference/en.desktop.placeholders.json` with `tools/emit-en.mjs` +\n'
+            printf '`tools/build-desktop-reference.py` when it moved.\n'
           } > body.md
           number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
             --search "in:title \"$title\"" --json number --jq '.[0].number // empty')

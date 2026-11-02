@@ -24,9 +24,9 @@ Restart the Desktop app (or start a new session) so the catalogs are picked up.
 
 | Surface | File | Keys | Coverage |
 |---|---|---|---|
-| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,487 | **100%** at the last resync — 98.8% against `main` @ `25b50015` |
-| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,356 | **100%** at the last resync — 97.1% against `main` @ `25b50015` |
-| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | 92.7% against `main` @ `25b50015` — resync with `main` is the next PR: 402 new keys to translate, 53 retired upstream to drop |
+| Core (CLI, gateway, approvals, tips) | `locales/pt-br.yaml` | 3,515 | **100%** of the English core catalog at `main` @ `25b50015` |
+| TUI (`hermes --tui`) | `locales/pt-br.tui.yaml` | 1,390 | **100%** of the English TUI catalog at `main` @ `25b50015` |
+| Desktop (app) | `locales/pt-br.desktop.yaml` | 5,172 | 92.7% of the English desktop catalog at `main` @ `25b50015` — the desktop resync is the next PR: 402 new keys to translate, 53 retired upstream to drop |
 
 The core and TUI catalogs mirror the `pt` locale already bundled upstream; `pt-br` is registered as a
 real variant so it always wins over the `pt`/`pt-BR` alias. The Desktop catalog is the original
@@ -131,17 +131,17 @@ python tools/verify_pack.py --json                 # machine-readable report
 python tools/verify_pack.py --min-desktop-coverage 0.80
 ```
 
-Current result against `main` @ `25b50015` (2026-11-02): **PASS**, 3 warnings (one per surface, listing
-the keys `main` has since retired), 0 errors.
+Current result against `main` @ `25b50015` (2026-11-02): **PASS**, 1 warning (the 53 desktop keys `main`
+has since retired), 0 errors.
 
 ```
-- core     locales/pt-br.yaml:         3487 key(s),  98.8% of the English catalog, 14 unknown, 0 placeholder mismatch(es)
-- tui      locales/pt-br.tui.yaml:     1356 key(s),  97.1% of the English catalog,  6 unknown, 0 placeholder mismatch(es)
+- core     locales/pt-br.yaml:         3515 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
+- tui      locales/pt-br.tui.yaml:     1390 key(s), 100.0% of the English catalog, 0 unknown, 0 placeholder mismatch(es)
 - desktop  locales/pt-br.desktop.yaml: 5172 key(s),  92.7% of the English catalog, 53 unknown, 0 placeholder mismatch(es)
 ```
 
 Verified against that revision: **0 placeholder/key divergences** on all three surfaces
-(core 3,473/3,515 · TUI 1,350/1,390 · Desktop 5,119/5,521 — the numerators are the keys that match the
+(core 3,515/3,515 · TUI 1,390/1,390 · Desktop 5,119/5,521 — the numerators are the keys that match the
 English reference, which is what the coverage column divides by; the retired keys are reported as
 warnings and ignored at runtime, and 4 known reference keys are arrays or structured values a text pack
 cannot carry: `composer.followUpPlaceholders`, `composer.newSessionPlaceholders`, `intro.custom`,

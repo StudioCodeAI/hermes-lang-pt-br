@@ -18,14 +18,16 @@ and the only one that ships versioned releases.
 | 2026-10-19 | core + TUI resynced with `main` (`3820a06`); the pt-PT → pt-BR wording pass by @4nrry merges (`dd9ec89`) |
 | 2026-10-19 | core resynced again: the 8 new `/queue` strings (`cli.queue.*`) translated, 3,485/3,485 keys |
 | 2026-10-22 | core resynced again: the 2 new gateway error notices (`gateway.errors.cron_session_read_only`, `gateway.errors.workspace_unavailable`), 3,487/3,487 keys |
+| 2026-11-02 | core + TUI resynced with `main` @ `25b50015`: the 42 core and 40 TUI keys added since the last sync (seeded from the upstream `pt` catalog, pt-BR wording pass) and the 20 keys upstream retired dropped — core 3,515/3,515, TUI 1,390/1,390 (v1.2.2) |
 
 ## Who wrote what
 
 - **Core and TUI** — mirror the `pt` locale bundled upstream (MIT, © Nous Research and its
   contributors), re-registered here as the real `pt-br` id so it wins over the `pt` / `pt-BR` alias.
 - **Desktop** — original to this pack, grown out of the work in #92590 / commit `0bbc800f55e`. It is
-  the largest surface (5,172 of 5,176 reference keys; the four remaining are arrays/structured values
-  a text pack cannot carry).
+  the largest surface (5,172 keys). It is mid-resync: the keys upstream added since the last desktop
+  pass (402 against `main` @ `25b50015`) are still untranslated, and a handful of reference keys are
+  arrays/structured values a text pack cannot carry.
 - **@4nrry** — 85 European-Portuguese → Brazilian-Portuguese wording fixes (pack PR #3, merged as
   `dd9ec89`).
 - **@henrickgu** — credited for an independent pack that reused the keys from #92590 and for a

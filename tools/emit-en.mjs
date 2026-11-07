@@ -38,6 +38,7 @@ const alias = {
   '@hermes/shared/ansi': join(EN, 'apps/shared/src/ansi.ts'),
   '@hermes/shared/billing': join(EN, 'apps/shared/src/billing-types.ts'),
   '@hermes/shared/color': join(EN, 'apps/shared/src/color.ts'),
+  '@hermes/shared/gateway-text': join(EN, 'apps/shared/src/gateway-text.ts'),
   '@hermes/shared/i18n': join(EN, 'apps/shared/src/i18n.ts'),
   '@hermes/shared/translucency': join(EN, 'apps/shared/src/translucency.ts'),
   '@hermes/shared': join(EN, 'apps/shared/src/index.ts'),

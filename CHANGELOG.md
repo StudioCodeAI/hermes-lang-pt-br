@@ -4,6 +4,15 @@ What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; ev
 revision its figures were measured against. Coverage is `matched / reference` per surface — a text pack
 cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of 5,521 keys.
 
+## 1.2.4 — 2026-11-07
+
+- **Full resync across all three surfaces against `main` @ `a9ff9799`**: 150 new keys translated, 4 stale keys dropped.
+- **Core (100.0% — 3,535/3,535)**: added 22 keys (`cli.backtrack.*` transcript rewind, `slash.rewind.*`, Feishu clarification, rollback undo notices). Dropped 2 stale Yuanbao keys.
+- **TUI (100.0% — 1,445/1,445)**: added 55 keys (queue management `/queue`, rewind flow `/rewind`, plugin updates status, paste section chips).
+- **Desktop (99.9% — 5,588/5,592)**: added 73 keys (Team Gateway relay links, credential vault filling, plugin auto-update & update-all, conversation compacting, Daybreak routing). Dropped 2 stale skills hub keys.
+- **Desktop placeholder reference updated**: snapshot regenerated against `a9ff9799` (764 keys checked, 0 mismatches).
+- Closes #6 (i18n drift).
+
 ## 1.2.3 — 2026-11-02
 
 - **Desktop resynced to 100% of the translatable English catalog** at `main` @ `25b50015`: 398 keys

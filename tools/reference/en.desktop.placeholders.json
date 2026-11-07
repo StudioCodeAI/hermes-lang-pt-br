@@ -1,6 +1,6 @@
 {
  "_comment": "Placeholder shape of the English desktop bundle, emitted by tools/emit-en.mjs at the revision in `ref`. Used by tools/verify_pack.py to check the desktop surface; regenerate it on every desktop resync.",
- "ref": "25b5001538fcd24041f190dd57ede0f79fddeb18",
+ "ref": "a9ff9799e273f525b82718cdc69fdec71b1dca5a",
  "placeholders": {
   "agents.activeCount": [
    "0"
@@ -112,6 +112,18 @@
    "0"
   ],
   "assistant.mcpSetup.installed": [
+   "0"
+  ],
+  "assistant.mcpSetup.launchCommand": [
+   "0"
+  ],
+  "assistant.mcpSetup.launchCwd": [
+   "0"
+  ],
+  "assistant.mcpSetup.launchEnv": [
+   "0"
+  ],
+  "assistant.mcpSetup.launchRemote": [
    "0"
   ],
   "assistant.mcpSetup.toolCount": [
@@ -750,6 +762,40 @@
   "messaging.platformEnabled": [
    "0"
   ],
+  "messaging.relayLink.copyFailed": [
+   "0"
+  ],
+  "messaging.relayLink.intro": [
+   "0",
+   "0"
+  ],
+  "messaging.relayLink.link": [
+   "0"
+  ],
+  "messaging.relayLink.linkAnother": [
+   "0"
+  ],
+  "messaging.relayLink.linked": [
+   "0"
+  ],
+  "messaging.relayLink.managedNote": [
+   "0"
+  ],
+  "messaging.relayLink.noNewAccount": [
+   "0"
+  ],
+  "messaging.relayLink.open": [
+   "0"
+  ],
+  "messaging.relayLink.qrAlt": [
+   "0"
+  ],
+  "messaging.relayLink.refused": [
+   "0"
+  ],
+  "messaging.relayLink.stepOpen": [
+   "0"
+  ],
   "messaging.revokeAria": [
    "0"
   ],
@@ -905,6 +951,15 @@
    "0"
   ],
   "preview.web.startRestartFailed": [
+   "0"
+  ],
+  "preview.web.vaultFilled": [
+   "0"
+  ],
+  "preview.web.vaultTitle": [
+   "0"
+  ],
+  "preview.web.vaultUnlock": [
    "0"
   ],
   "preview.web.watchFailed": [
@@ -1326,6 +1381,9 @@
   "settings.gateway.webAccess.restartFailedBecause": [
    "0"
   ],
+  "settings.gateway.webAccess.startElapsed": [
+   "0"
+  ],
   "settings.gateway.webAccess.unavailableDetail": [
    "0"
   ],
@@ -1610,6 +1668,9 @@
   "settings.sessions.messages": [
    "0"
   ],
+  "settings.toolsets.browserRealProfile.signinsImported": [
+   "0"
+  ],
   "settings.toolsets.failedRemove": [
    "0"
   ],
@@ -1810,6 +1871,9 @@
   "shell.statusbar.connectionSshTooltip": [
    "0"
   ],
+  "shell.statusbar.contextUsagePanel.compact.questionNamed": [
+   "0"
+  ],
   "shell.statusbar.contextUsagePanel.percentFull": [
    "0"
   ],
@@ -1951,6 +2015,9 @@
   "skills.plugins.alreadyInstalled": [
    "0"
   ],
+  "skills.plugins.autoUpdateTip": [
+   "0"
+  ],
   "skills.plugins.catalogProvenance": [
    "0"
   ],
@@ -2059,6 +2126,11 @@
   ],
   "skills.plugins.uninstalledDesktop": [
    "0"
+  ],
+  "skills.plugins.updateAllDone": [
+   "0",
+   "1",
+   "2"
   ],
   "skills.plugins.updateConsentBody": [
    "0",

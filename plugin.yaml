@@ -1,10 +1,9 @@
 name: hermes-lang-pt-br
-version: 1.2.4
-description: >-
-  Brazilian Portuguese (Português do Brasil) language pack for Hermes Agent — core (CLI, gateway,
-  approvals, tips), the Ink TUI and the Desktop app. Text-only: no code, no network, no permissions.
-  Just catalogs. Tradução pt-BR da interface do Hermes Agent.
+version: 1.2.5
+description: 'Brazilian Portuguese (Português do Brasil) language pack for Hermes Agent — core (CLI, gateway, approvals, tips),
+  the Ink TUI and the Desktop app. Text-only: no code, no network, no permissions. Just catalogs. Tradução pt-BR da interface
+  do Hermes Agent.'
 provides_locales:
-  - id: pt-br
-    endonym: Português (Brasil)
-    rtl: false
+- id: pt-br
+  endonym: Português (Brasil)
+  rtl: false

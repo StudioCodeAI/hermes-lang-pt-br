@@ -1,6 +1,6 @@
 {
  "_comment": "Placeholder shape of the English desktop bundle, emitted by tools/emit-en.mjs at the revision in `ref`. Used by tools/verify_pack.py to check the desktop surface; regenerate it on every desktop resync.",
- "ref": "a9ff9799e273f525b82718cdc69fdec71b1dca5a",
+ "ref": "main",
  "placeholders": {
   "agents.activeCount": [
    "0"
@@ -360,6 +360,9 @@
    "0"
   ],
   "catalog.toolsets.toolCount": [
+   "0"
+  ],
+  "catalog.updatesAvailable": [
    "0"
   ],
   "commandCenter.actions": [
@@ -1476,6 +1479,9 @@
   "settings.localModels.updateDetail": [
    "0",
    "1"
+  ],
+  "settings.localModels.updateSameBuildDetail": [
+   "0"
   ],
   "settings.localModels.vram": [
    "0"

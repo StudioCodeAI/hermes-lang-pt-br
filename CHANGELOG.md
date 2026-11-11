@@ -1,3 +1,11 @@
+## 1.2.5
+
+- Resync against `NousResearch/hermes-agent@main`: fill newly missing Desktop/core keys.
+- Drop stale core keys `gateway.topic.system_topic_intro` / `gateway.topic.system_topic_name`.
+- Polish inconsistent pt-BR wording; keep intentional English tech terms (gateway, plugin, skill, MCP, session/profile when product jargon, providers, etc.).
+- Desktop identical-to-English leftovers translated: 1; polish passes: 57.
+- Desktop keys skipped as non-text/array: ['composer.followUpPlaceholders', 'composer.newSessionPlaceholders', 'intro.custom', 'sidebar.projects.branchOff'].
+
 # Changelog
 
 What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; every release names the

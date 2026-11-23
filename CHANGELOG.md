@@ -6,10 +6,12 @@ cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of
 
 ## 1.2.5 — 2026-11-24
 
-- **Full resync across all three surfaces against `main` @ `352b249f`**: 162 new keys translated, 10 stale keys dropped. **Additive only** — no translation that shipped in 1.2.4 is modified.
+- **Full resync across all three surfaces against `main` @ `352b249f`**: 158 new keys translated, 10 stale keys dropped, and 4 structured overrides removed. **Additive only** — no translation that shipped in 1.2.4 is modified.
 - **Core (100.0% — 3,577/3,577)**: added 47 keys — `gateway.context` (13), `platform.shared` (10), `platform.telegram` (7), `gateway.exec_approval` (5), `cli.gateway_restart` (3), `gateway.debug` (3), `gateway.busy` (2), plus `gateway.moa`, `gateway.reset` and `gateway.shared`. Dropped 5 stale keys (`gateway.notify.turn_error_detailed`, `gateway.notify.turn_error_no_details`, `gateway.topic.system_topic_intro`, `gateway.topic.system_topic_name`, `platform.discord.limits.response_truncated`).
 - **TUI (100.0% — 1,445/1,445)**: unchanged — upstream added and dropped nothing on this surface.
-- **Desktop (100.0% — 5,698/5,698)**: added 115 keys — `settings.backup` (52), `assistant.approval` (15), `notifications.native` (8), `settings.notifications` (7), `settings.gateway` (5), `webhooks.signatureOptions` (4) and others. Dropped 5 stale keys (`composer.wakingProfile`, `skills.hub.pickerBrowse`, `skills.hub.pickerHide`, `skills.hub.pickerHint`, `skills.hub.pickerTitle`).
+- **Desktop (99.9% — 5,694 keys)**: added 115 keys — `settings.backup` (52), `assistant.approval` (15), `notifications.native` (8), `settings.notifications` (7), `settings.gateway` (5), `webhooks.signatureOptions` (4) and others. Dropped 5 stale keys (`composer.wakingProfile`, `skills.hub.pickerBrowse`, `skills.hub.pickerHide`, `skills.hub.pickerHint`, `skills.hub.pickerTitle`).
+- **Removed 4 entries a text-only pack must not carry** — upstream defines them as arrays or functions, and a scalar override makes the Desktop fail at runtime: `settings.backup.keeps` and `settings.backup.replaces` (arrays fed to `PlainList.items.map`), `intro.custom` (a function returning greeting bodies) and `sidebar.projects.branchOff` (a function returning `{ before, after }`).
+- **Wording corrected on 31 keys** found in review: the text described the wrong flow — backup presented as a terminal command and as a manual CLI transfer (it is the automatic Hermes Cloud transfer), a permanent permission described as single-session, a signature-scheme selector described as a secret header, and the public-paste disclosure missing its contents and retention warning.
 - **Desktop placeholder reference regenerated** against `main` @ `352b249f` (788 keys checked, 0 mismatches) — `tools/emit-en.mjs` + `tools/build-desktop-reference.py`.
 - Closes #10 (i18n drift).
 

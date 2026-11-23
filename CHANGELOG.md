@@ -4,6 +4,15 @@ What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; ev
 revision its figures were measured against. Coverage is `matched / reference` per surface — a text pack
 cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of 5,521 keys.
 
+## 1.2.5 — 2026-11-24
+
+- **Full resync across all three surfaces against `main` @ `352b249f`**: 162 new keys translated, 10 stale keys dropped. **Additive only** — no translation that shipped in 1.2.4 is modified.
+- **Core (100.0% — 3,577/3,577)**: added 47 keys — `gateway.context` (13), `platform.shared` (10), `platform.telegram` (7), `gateway.exec_approval` (5), `cli.gateway_restart` (3), `gateway.debug` (3), `gateway.busy` (2), plus `gateway.moa`, `gateway.reset` and `gateway.shared`. Dropped 5 stale keys (`gateway.notify.turn_error_detailed`, `gateway.notify.turn_error_no_details`, `gateway.topic.system_topic_intro`, `gateway.topic.system_topic_name`, `platform.discord.limits.response_truncated`).
+- **TUI (100.0% — 1,445/1,445)**: unchanged — upstream added and dropped nothing on this surface.
+- **Desktop (100.0% — 5,698/5,698)**: added 115 keys — `settings.backup` (52), `assistant.approval` (15), `notifications.native` (8), `settings.notifications` (7), `settings.gateway` (5), `webhooks.signatureOptions` (4) and others. Dropped 5 stale keys (`composer.wakingProfile`, `skills.hub.pickerBrowse`, `skills.hub.pickerHide`, `skills.hub.pickerHint`, `skills.hub.pickerTitle`).
+- **Desktop placeholder reference regenerated** against `main` @ `352b249f` (788 keys checked, 0 mismatches) — `tools/emit-en.mjs` + `tools/build-desktop-reference.py`.
+- Closes #10 (i18n drift).
+
 ## 1.2.4 — 2026-11-07
 
 - **Full resync across all three surfaces against `main` @ `a9ff9799`**: 150 new keys translated, 4 stale keys dropped.

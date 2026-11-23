@@ -1,6 +1,6 @@
 {
  "_comment": "Placeholder shape of the English desktop bundle, emitted by tools/emit-en.mjs at the revision in `ref`. Used by tools/verify_pack.py to check the desktop surface; regenerate it on every desktop resync.",
- "ref": "a9ff9799e273f525b82718cdc69fdec71b1dca5a",
+ "ref": "352b249f67fb",
  "placeholders": {
   "agents.activeCount": [
    "0"
@@ -76,7 +76,13 @@
    "1",
    "2"
   ],
+  "assistant.approval.access.timedOut": [
+   "0"
+  ],
   "assistant.approval.alwaysDescription": [
+   "0"
+  ],
+  "assistant.approval.network.timedOut": [
    "0"
   ],
   "assistant.catalogInstall.envVar": [
@@ -362,6 +368,9 @@
   "catalog.toolsets.toolCount": [
    "0"
   ],
+  "catalog.updatesAvailable": [
+   "0"
+  ],
   "commandCenter.actions": [
    "0"
   ],
@@ -439,6 +448,12 @@
   "composer.removeAttachment": [
    "0"
   ],
+  "composer.switchProfileFailed": [
+   "0"
+  ],
+  "composer.switchingProfile": [
+   "0"
+  ],
   "composer.wakeWord": [
    "0"
   ],
@@ -451,7 +466,7 @@
   "composer.wakeWordPausedVoice": [
    "0"
   ],
-  "composer.wakingProfile": [
+  "composer.willSendTo": [
    "0"
   ],
   "connectors.connectErrorFor": [
@@ -847,10 +862,22 @@
   "notifications.more": [
    "0"
   ],
+  "notifications.native.accessReadBody": [
+   "0"
+  ],
+  "notifications.native.accessReadWriteBody": [
+   "0"
+  ],
+  "notifications.native.accessTitleNamed": [
+   "0"
+  ],
   "notifications.native.approvalTitleNamed": [
    "0"
   ],
   "notifications.native.inputTitleNamed": [
+   "0"
+  ],
+  "notifications.native.networkTitleNamed": [
    "0"
   ],
   "notifications.updateReadyMessage": [
@@ -1227,6 +1254,43 @@
   "settings.appearance.uiScaleDesc": [
    "0"
   ],
+  "settings.backup.acknowledge": [
+   "0"
+  ],
+  "settings.backup.backupKept": [
+   "0"
+  ],
+  "settings.backup.botNote": [
+   "0"
+  ],
+  "settings.backup.botsOff": [
+   "0",
+   "1"
+  ],
+  "settings.backup.confirmTitle": [
+   "0"
+  ],
+  "settings.backup.doneHelp": [
+   "0"
+  ],
+  "settings.backup.gatewayDown": [
+   "0"
+  ],
+  "settings.backup.partialHelp": [
+   "0"
+  ],
+  "settings.backup.replace": [
+   "0"
+  ],
+  "settings.backup.stepRestore": [
+   "0"
+  ],
+  "settings.backup.undoNote": [
+   "0"
+  ],
+  "settings.backup.undoneHelp": [
+   "0"
+  ],
   "settings.billing.amountValidation.decimal": [
    "0"
   ],
@@ -1477,6 +1541,9 @@
    "0",
    "1"
   ],
+  "settings.localModels.updateSameBuildDetail": [
+   "0"
+  ],
   "settings.localModels.vram": [
    "0"
   ],
@@ -1584,6 +1651,12 @@
    "0"
   ],
   "settings.model.subagents.routing.routeActions": [
+   "0"
+  ],
+  "settings.notifications.phonePresence.watchingComputer": [
+   "0"
+  ],
+  "settings.notifications.phonePresence.watchingWindow": [
    "0"
   ],
   "settings.pluginPages.pageCount": [

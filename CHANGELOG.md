@@ -4,6 +4,13 @@ What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; ev
 revision its figures were measured against. Coverage is `matched / reference` per surface — a text pack
 cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of 5,521 keys.
 
+## 1.2.6 — 2026-11-24
+
+- **Fix a string that shipped in 1.2.4**: `connectorsPage.accounts.removeTitle` now reads `Remover a conta {1} do {0}?`. The previous wording glued the two values together (`Remover a conta Telegram work?`), which read like a single name.
+- **Why it is singular**: the dialog removes **one account at a time** — the component's own contract is *"a one-account remove keeps the dialog open on the other accounts"* — and there is no collective-removal string in the English catalog. The plural already lives where it belongs, in the body: *"Suas outras contas continuam conectadas."*
+- **Context, not word order**: `removeTitle(target.card.name, accountName(scoped))` shows `{0}` is the connector and `{1}` the account label, so the preposition — not a token swap — is what makes the sentence read naturally.
+- Placeholder set unchanged (`{0}`, `{1}`), so the catalog check stays green.
+
 ## 1.2.5 — 2026-11-24
 
 - **Full resync across all three surfaces against `main` @ `352b249f`**: 158 new keys translated, 10 stale keys dropped, and 4 structured overrides removed. **Additive only** — no translation that shipped in 1.2.4 is modified.

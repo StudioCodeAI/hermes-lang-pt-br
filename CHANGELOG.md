@@ -4,6 +4,13 @@ What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; ev
 revision its figures were measured against. Coverage is `matched / reference` per surface — a text pack
 cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of 5,521 keys.
 
+## 1.2.7 — 2026-11-26
+
+- **Resync against `main` @ `ace0a8d3`**: upstream commit `aa7ee99c` (2026-11-25, *show per-profile approvals in group rooms*) added 2 new Desktop text keys; both are now translated. Additive only — no existing translation changed, 0 stale keys.
+- **Desktop (99.9% — 5,696/5,702)**: added `shell.approvalMode.perProfile` (*Por perfil*) and `shell.approvalMode.perProfileDescription` (*Os modos de aprovação são definidos por perfil. Abra um bot ou perfil para alterar o modo dele.*). The 6 remaining untranslated entries are the known non-text leaves (arrays/functions) a text-only pack must not carry.
+- **Core (100.0% — 3,577/3,577)** and **TUI (100.0% — 1,445/1,445)**: unchanged — upstream added and dropped nothing on these surfaces.
+- New keys carry no placeholders; `tools/verify_pack.py --ref main` passes with 0 errors, 0 unknown keys and 0 placeholder divergences.
+
 ## 1.2.6 — 2026-11-24
 
 - **Fix a string that shipped in 1.2.4**: `connectorsPage.accounts.removeTitle` now reads `Remover a conta {1} do {0}?`. The previous wording glued the two values together (`Remover a conta Telegram work?`), which read like a single name.

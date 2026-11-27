@@ -4,6 +4,13 @@ What changed, newest first. The pack tracks `NousResearch/hermes-agent@main`; ev
 revision its figures were measured against. Coverage is `matched / reference` per surface — a text pack
 cannot carry array- or object-valued entries, so the Desktop ceiling is 5,517 of 5,521 keys.
 
+## 1.2.8 — 2026-11-27
+
+- **Resync against `main` @ `5fed6742`**: upstream commits `1bcd1171` + `5fed6742` (2026-11-26, *list catalog platforms that are not installed and install them on pick* / *offer only official and verified catalog platforms*) added a new Desktop `messaging.catalog` block. Its 10 text keys are now translated. Additive only — no existing translation changed, 0 stale keys.
+- **Desktop (99.8% — 5,706/5,715)**: added `messaging.catalog.sectionTitle` (*Disponíveis para instalar*), `badges.official` (*Oficial*), `badges.verified` (*Verificado*), `notInstalled` (*Não instalado*), `disclosure` (*Aviso:*), `install` (*Instalar*), `installing` (*Instalando…*), `installedDetail` (*Insira as credenciais para conectá-lo.*), `lazyOff` (*As instalações automáticas de plugins estão desativadas (security.allow_lazy_installs), portanto o Hermes não o instala por aqui.*) and `runCommand` (*Instale-o pelo terminal:*). The 9 remaining untranslated entries are non-text leaves a text-only pack must not carry: the 6 known ones (`composer.followUpPlaceholders`, `composer.newSessionPlaceholders`, `intro.custom`, `settings.backup.keeps`, `settings.backup.replaces`, `sidebar.projects.branchOff`) plus the 3 new function-valued `messaging.catalog` leaves (`intro`, `installed`, `installFailed`).
+- **Core (100.0% — 3,577/3,577)** and **TUI (100.0% — 1,445/1,445)**: unchanged — upstream added and dropped nothing on these surfaces.
+- New keys carry no placeholders; `tools/verify_pack.py --ref main` passes with 0 errors, 0 unknown keys and 0 placeholder divergences.
+
 ## 1.2.7 — 2026-11-26
 
 - **Resync against `main` @ `ace0a8d3`**: upstream commit `aa7ee99c` (2026-11-25, *show per-profile approvals in group rooms*) added 2 new Desktop text keys; both are now translated. Additive only — no existing translation changed, 0 stale keys.
